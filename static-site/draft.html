@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <title>Wayfarer</title>
+</head>
+<body>
+    <header>
+        <img src="templogo.png" alt="Wayfarer Logo"/>
+        <nav id="header-nav">
+            <ul>
+                <li><a href=""> Sign Up </a></li>
+                <li><a href=""> Log In </a></li>
+                <!-- If logged in hide the above and show the following: -->
+                <li><a href=""> Cities List </a></li>
+                <li><a href=""> Users List (for development only)</a></li>
+                <li><a href="erase jwt token, redir to landing"> Log Out </a></li>
+                <li><a href="logged in user's profile view"> username </a></li>
+            </ul>
+        </nav>
+        <!-- If logged in, show search bar -->
+        <form>
+            <input type="search" placeholder="Search Cities"/>
+            <button onclick="">GO!</button>
+        </form>
+    </header>
+    <section id="landingPage">
+        <div id="carousel-container">
+            <p>CAROUSEL GOES HERE. SAMPLE IMAGE:</p>
+            <img src="../src/images/templogo.png" alt="sample image"/>
+        </div>
+        <h1>Wayfarer Twilight is...</h1>
+        <div id="section-container">
+            <section>
+                <h2> Section 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minima autem quaerat dicta fugit quae vitae voluptatum voluptates minus sed eum laudantium soluta non labore voluptas perspiciatis, illo architecto qui.
+                </p>
+            </section>
+            <section>
+                <h2> Section 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolor magni molestiae ut perferendis consequuntur explicabo minus, ullam quasi, veritatis, placeat vel officia dignissimos quam sed aperiam dolores est commodi?
+                </p>
+            </section>
+            <section>
+                <h2> Section 3</h2>
+                <p> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sint blanditiis unde nihil perspiciatis ullam. Quisquam mollitia blanditiis, non voluptates fugit eos provident dolorum ex earum velit voluptate sunt magni?
+                </p>
+            </section>
+        </div>
+    </section>
+    <section id="cityPage">
+        <aside>
+                <h1>Cities</h1>
+                <ul>
+                    <li><img src="#"><a href="#">San Francisco</a></li>
+                    <li><img src="#"><a href="#">Bangkok</a></li>
+                    <li><img src="#"><a href="#">London</a></li>
+                    <li><img src="#"><a href="#">Paris</a></li>
+                    <li><img src="#"><a href="#">Dubai</a></li>
+                    <li><img src="#"><a href="#">Singapore</a></li>
+                    <li><img src="#"><a href="#">New York City</a></li>
+                    <li><img src="#"><a href="#">Tokyo</a></li>
+                    <li><img src="#"><a href="#">Sydney</a></li>
+                    <li><img src="#"><a href="#">Seattle</a></li>
+                    <li><img src="#"><a href="#">Mexico City</a></li>
+                </ul>
+        </aside>
+        <article>
+            <div class="cityHeaderWrapper">
+                <div class="cityHeaderText">
+                    <h1>San Francisco</h1>
+                    <h3>California, USA</h3>
+                </div>
+                <div class="cityHeaderImage">
+                    <img src="#">
+                </div>
+            </div>
+            <div class="cityPostsWrapper">
+                <div class="cityPostsHeader">
+                    <h1>Posts</h1>
+                    <a href="#">+</a>
+                </div>
+                <div class="postContainer">
+                    <div class="postImage">
+                        <img src="#"> 
+                    </div>
+                    <div class="postContent">
+                        <h2>Title of Post</h2>
+                        <p>Incididunt labore exercitation reprehenderit pariatur sit adipisicing excepteur eu dolore sit. Deserunt deserunt officia excepteur esse sunt anim tempor. Anim adipisicing incididunt pariatur dolor velit officia aliqua esse officia.</p>
+                    </div>
+                </div>
+                <div class="postContainer">
+                        <div class="postImage">
+                            <img src="#"> 
+                        </div>
+                        <div class="postContent">
+                            <h2>Title of Post</h2>
+                            <p>Incididunt labore exercitation reprehenderit pariatur sit adipisicing excepteur eu dolore sit. Deserunt deserunt officia excepteur esse sunt anim tempor. Anim adipisicing incididunt pariatur dolor velit officia aliqua esse officia.</p>
+                        </div>
+                </div>
+                <div class="postContainer">
+                        <div class="postImage">
+                            <img src="#"> 
+                        </div>
+                        <div class="postContent">
+                            <h2>Title of Post</h2>
+                            <p>Incididunt labore exercitation reprehenderit pariatur sit adipisicing excepteur eu dolore sit. Deserunt deserunt officia excepteur esse sunt anim tempor. Anim adipisicing incididunt pariatur dolor velit officia aliqua esse officia.</p>
+                        </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <div class ="userProfInfo">
+        <div class="userName">
+                <img class="profilePic" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg">
+            <h2>Username</h2>
+            <h2>Current City:</h2>
+            <h2>Member Since: 10/02/18</h2>
+        </div>
+        <div class="userPosts">
+            <h3>Posts by Username</h3>
+            <ul>
+                <li><a href="">Post 1</a></li>
+                <li><a href="">Post 1</a></li>
+                <li><a href="">Post 1</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p> made by Yi Liu, 
+            Natalie Poulson, 
+            Andrea Piazza, and 
+            Sofia Aguirre (c) 2018</p>
+        <nav id="footer-nav">
+            <ul>
+                <li><a href=""> Readme.md on GitHub </a></li>
+                <li><a href=""> Facebook </a></li>
+                <li><a href=""> Instagram </a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
