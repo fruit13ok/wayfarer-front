@@ -1,12 +1,61 @@
 import React, { Component } from 'react';
+import Carousel from './Carousel'
 
 class  Landing extends Component {
-  render() {
+
+constructor (props) {
+    super(props);
+
+    this.state = {
+        scrollStepDistance: 3,
+        visibleIndex: 0
+    };
+    }
+
+    handleScrollToIndex = (index) => {
+    this.setState({
+        visibleIndex: index
+    });
+    }
+
+render() {
+    const data = new Array(15).fill(null);
+
+    const items = data.map((velue, index) => {
+        return <div
+            key={String(index)}
+            style={{
+            border: '1px solid #00f',
+            boxSizing: 'border-box',
+            display: 'block',
+            flexGrow: 1,
+            fontSize: '32px',
+            height: '100px',
+            lineHeight: '100px',
+            textAlign: 'center'
+        }}>{index}</div>;
+    });
+
     return (
         <section id="landingPage">
             <div id="carousel-container">
+            <Carousel
+            controlWidth={25}
+            firstVisibleIndex={this.state.visibleIndex}
+            itemMargin={10}
+            itemWidth={50}
+            onItemScroll={this.handleScrollToIndex}
+            scrollStepDistance={this.state.scrollStepDistance}
+            style={{
+            background: '#eee',
+            height: 100,
+            maxWidth: 1000
+            }}
+        >
+            {items}
+        </Carousel>
                 <p>CAROUSEL GOES HERE. SAMPLE IMAGE:</p>
-                <img src="../src/images/templogo.png" alt="sample image"/>
+                <img src="" alt="sample image"/>
             </div>
             <h1>Wayfarer Twilight is...</h1>
             <div id="section-container">
@@ -31,7 +80,8 @@ class  Landing extends Component {
             </div>
         </section>
     );
-  }
 }
+}
+
 
 export default Landing;
