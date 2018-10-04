@@ -3,12 +3,18 @@ import React, { Component } from 'react';
 //import Modal from 'react-modal' 
 //import Carousel from 'react-carousel'
 import { Route, Link, Switch } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Main from './components/Main'
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        'TWILIGHT WAYFARER' SANITY CHECK
+        <Header />
+        <Main />
+        <Footer />
       </div>
     );
   }
