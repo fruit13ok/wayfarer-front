@@ -1,0 +1,32 @@
+$display: flex;
+
+.profilePic{
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profileHdr{
+    display: $display;
+    flex-direction: row-reverse;
+}
+
+li{
+    list-style-type:none;
+}
+
+.userProfInfo{
+    display: $display;
+}
+
+.userName{
+   margin:1em; 
+   width: 25%;
+}
+.userPosts{
+    width:75%;
+    margin: 2em;
+}
