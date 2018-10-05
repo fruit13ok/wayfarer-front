@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CityPostsList from './CityPostsList';
+import PostModalContainer from './PostModalContainer';
 
 class CityMain extends Component {
   render() {
@@ -7,7 +8,7 @@ class CityMain extends Component {
         <div className="cityPostsWrapper">
             <div className="cityPostsHeader">
                 <h1>Posts</h1>
-                <a href="#">+</a>
+                <PostModalContainer />
             </div>
             <CityPostsList />
         </div>
