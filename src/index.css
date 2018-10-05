@@ -16,42 +16,58 @@ header {
   display: flex;
 }
 
-.profilePic {
-  background-repeat: no-repeat;
-  background-position: 50%;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+.Modal {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  bottom: 20%;
+  background-color: papayawhip;
+  color: lightsteelblue;
 }
 
-.profileHdr {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-li {
-  list-style-type: none;
-}
-
-.userProfInfo {
-  display: flex;
-}
-
-.userName {
-  margin: 1em;
-  width: 25%;
-}
-
-.userPosts {
-  width: 75%;
-  margin: 2em;
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: slategray;
 }
 
 #cityPage {
   display: flex;
   width: 100vw;
   margin: 2em;
+}
+
+.Modal {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  bottom: 20%;
+  background-color: papayawhip;
+  color: lightsteelblue;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: slategray;
+}
+
+#carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  border: 5px solid red;
 }
 
 aside {
@@ -65,6 +81,12 @@ aside {
 aside h1 {
   margin: 1em 0 0 2em;
 }
+
+article {
+  width: 60vw;
+  border: 0.1em solid black;
+}
+
 aside li {
   list-style: none;
   background-color: lightgray;
@@ -88,21 +110,19 @@ aside a {
   padding-left: 1em;
 }
 
-article {
-  width: 60vw;
-  border: 0.1em solid black;
-}
-article .cityHeaderWrapper {
+.cityHeaderWrapper {
   display: flex;
   justify-content: space-around;
   height: 40vh;
 }
-article .cityHeaderImage {
+
+.cityHeaderImage {
   border: 0.1em solid black;
   width: 40vw;
   margin: 2em;
 }
-article .cityHeaderText {
+
+.cityHeaderText {
   margin-top: 3em;
   margin-left: 2em;
   width: 20vw;
@@ -111,40 +131,65 @@ article .cityHeaderText {
   justify-content: flex-start;
   align-items: flex-start;
 }
-article .cityHeaderText h1 {
+.cityHeaderText h1 {
   margin: 0;
 }
-article .cityHeaderText h3 {
+.cityHeaderText h3 {
   margin: 0.5em 0 0 0;
 }
-article .postContainer {
-  margin: 2em;
-}
-article .cityPostsHeader {
+
+.cityPostsHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 2em;
 }
-article .cityPostsHeader a {
+.cityPostsHeader a {
   color: black;
   text-decoration: none;
   font-size: 3em;
 }
-article .postContainer {
+
+.postContainer {
   display: flex;
   border: 0.1em solid black;
   border-radius: 20px;
+  margin: 2em;
 }
-article .postContent {
+
+.postContent {
   display: flex;
   flex-direction: column;
   width: 40vw;
 }
-article .postImage {
+
+.postImage {
   width: 10vw;
   border: 0.1em solid black;
   margin: 1em;
+}
+
+.profilePic {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.userProfInfo {
+  display: flex;
+}
+
+.userName {
+  margin: 1em;
+  width: 25%;
+}
+
+.userPosts {
+  width: 75%;
+  margin: 2em;
 }
 
 /*# sourceMappingURL=index.css.map */

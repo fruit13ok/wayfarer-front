@@ -1,0 +1,11 @@
+aside {
+    display:flex;
+    flex-direction: column;
+    background-color:grey;
+    align-items: flex-start;
+    width:30vw;
+    border: .1em solid black;
+    h1 {
+        margin:1em 0 0 2em;
+    }
+}

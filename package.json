@@ -10,6 +10,7 @@
     "react-carousel": "^4.3.0",
     "react-dom": "^16.5.2",
     "react-modal": "^3.6.1",
+    "react-responsive-carousel": "^3.1.42",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4"
   },
