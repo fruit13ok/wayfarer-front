@@ -4,13 +4,25 @@ import SearchBar from './SearchBar'
 
 
 class Header extends Component {
+    
+    handleLogOut = () => {
+        this.setState({
+          email: '',
+          password: '',
+          isLoggedIn: false
+        })
+        localStorage.clear()
+      }
+
   render() {
+      console.log(this.props.isLoggedIn)
     return (
         <header>
             <img src="templogo.png" alt="Wayfarer Logo"/>
-            <Nav isLoggedIn={this.props.isLoggedIn}/>
-            {/* If logged in, show search bar */}
-            <SearchBar />
+            <div id='navAndSearch'>
+                <Nav isLoggedIn={this.props.isLoggedIn} handleLogOut={this.handleLogOut}/>
+                <SearchBar />
+            </div>
         </header>
     );
   }
