@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import LandingCarousel from './LandingCarousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 class  Landing extends Component {
-  render() {
+
+render() {
     return (
         <section id="landingPage">
             <div id="carousel-container">
-                <p>CAROUSEL GOES HERE. SAMPLE IMAGE:</p>
-                <img src="../src/images/templogo.png" alt="sample image"/>
+            <LandingCarousel />
             </div>
             <h1>Wayfarer Twilight is...</h1>
             <div id="section-container">
@@ -31,7 +33,8 @@ class  Landing extends Component {
             </div>
         </section>
     );
-  }
 }
+}
+
 
 export default Landing;

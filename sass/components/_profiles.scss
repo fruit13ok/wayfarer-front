@@ -9,24 +9,11 @@ $display: flex;
     object-fit: cover;
 }
 
-.profileHdr{
-    display: $display;
-    flex-direction: row-reverse;
-}
-
-li{
-    list-style-type:none;
-}
-
 .userProfInfo{
     display: $display;
 }
 
 .userName{
-   margin:1em; 
-   width: 25%;
-}
-.userPosts{
-    width:75%;
-    margin: 2em;
+    margin:1em; 
+    width: 25%;
 }
