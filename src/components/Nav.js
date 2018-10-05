@@ -12,12 +12,11 @@ class Nav extends Component {
             navBarItems.push(<li><a href=""> Users List (for development only)</a></li>)
         }
         else {
-            navBarItems.push( <LoginModalContainer />)
+            navBarItems.push( <LoginModalContainer/>)
         }
     return (
        <nav id="header-nav">
            <ul>
-          
             {navBarItems}
            </ul>
        </nav>

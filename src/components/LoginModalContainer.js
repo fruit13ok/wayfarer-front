@@ -15,7 +15,7 @@ class LoginModalContainer extends Component {
       username:'',
       password: '',
       currentCity: '',
-      isLoggedIn: false
+      // isLoggedIn: false
     }
   }
   // this LoginModalCOntainer.js has a button to launch modal by set modalIsOpen state to true, LoginModal.js will listen to it
@@ -41,18 +41,19 @@ class LoginModalContainer extends Component {
     console.log('input2: ',this.state.password);
     console.log('input3: ',this.state.currentCity);
     event.preventDefault();
-      axios.post('http://localhost:3001/',
+      axios.post('http://localhost:3001/signup',
         {
           username: this.state.username,
           password: this.state.password,
           currentCity: this.state.currentCity
         } )
         .then(response => {
-          console.log('SUCCESS')
-          // localStorage.token=response.data.token
-          // this.setState({
-          //   isLoggedIn: true
-          // })
+          // console.log('SUCCESS')
+          localStorage.token=response.data.token
+          this.setState({
+            isLoggedIn: true
+          })
+          // console.log(this.state.isLoggedIn)
         })
         .catch(err => console.log(err))
   }
@@ -61,20 +62,22 @@ class LoginModalContainer extends Component {
     event.preventDefault();
     console.log('input1: ',this.state.username);
     console.log('input2: ',this.state.password);
-    
-    axios.post('http://localhost:3001/', 
+    console.log('outside axios')
+    axios.post('http://localhost:3001/login', 
     {
       username: this.state.username,
       password: this.state.password
     })
     .then(response => {
+      // console.log(response.data.token)
     localStorage.token= response.data.token
     this.setState({
       isLoggedIn: true
+      })
+      console.log(this.state.isLoggedIn)
     })
-  })
-  .catch(err => console.log(err))
-  }
+    .catch(err => console.log(err, 'hello')) 
+  }    
 
   render() {
     return (
@@ -93,7 +96,8 @@ class LoginModalContainer extends Component {
         handleCloseModal={this.handleCloseModal}
         handleInput={this.handleInput}
         handleSignUp={this.handleSignUp}
-        handleLogIn={this.handleLogIn} />
+        handleLogIn={this.handleLogIn}
+        />
       </div>
     );
   }

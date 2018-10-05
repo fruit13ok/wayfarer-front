@@ -6,6 +6,7 @@ import { Route, Link, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Main from './components/Main'
+import axios from 'axios'
 
 
 class App extends Component {
@@ -16,6 +17,19 @@ class App extends Component {
       isLoggedIn:false
     }
   }
+
+componentDidMount () {
+  if (localStorage.token) {
+    this.setState({
+      isLoggedIn:true
+    })
+  } else {
+    this.setState({
+      isLoggedIn:false
+    })
+  }
+}
+
   render() {
     return (
       <div className="App">
