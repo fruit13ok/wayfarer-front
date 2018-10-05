@@ -1,0 +1,16 @@
+.postContainer {
+    display:flex;
+    border: .1em solid black;
+    border-radius: 20px;
+    margin:2em;
+}
+.postContent {
+    display:flex;
+    flex-direction: column;
+    width:40vw;
+}
+.postImage {
+    width:10vw;
+    border: .1em solid black;
+    margin:1em;
+}

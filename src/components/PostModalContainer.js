@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// import '.s/index.css';
-import LoginModal from './LoginModal';
+import PostModal from './PostModal'
 
-class LoginModalContainer extends Component {
+class PostModalContainer extends Component {
   constructor () {
     super()
     this.state = {
@@ -46,9 +45,9 @@ class LoginModalContainer extends Component {
         <button
           onClick={this.handleOpenModal}
         >
-          Sign In / Login
+          +
         </button>
-        <LoginModal 
+        <PostModal 
         modalIsOpen={this.state.modalIsOpen} 
         handleCloseModal={this.handleCloseModal}
         handleChange={this.handleChange}
@@ -58,4 +57,4 @@ class LoginModalContainer extends Component {
   }
 }
 
-export default LoginModalContainer;
+export default PostModalContainer;

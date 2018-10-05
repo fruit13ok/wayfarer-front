@@ -16,7 +16,7 @@ import Modal from 'react-modal';
 // className and overlayClassName apply style from LoginModal.css to this Modal
 // multiple input form need to have name attribute to identify which state
 Modal.setAppElement('#root')
-const LoginModal = (props) => {
+const PostModal = (props) => {
     return (
         <Modal
         isOpen={props.modalIsOpen}
@@ -26,14 +26,14 @@ const LoginModal = (props) => {
         overlayClassName="Overlay"
         >
             <form onSubmit={props.handleSubmit}>
-                <input type="text" name='input1' onKeyUp={props.handleChange}/>
-                <input type="text" name='input2' onKeyUp={props.handleChange}/>
-                <input type="text" name='input3' onKeyUp={props.handleChange}/>
-                <input type="submit"  value="Submit" />
+                <input type="text" name='input1' placeholder="Title" onKeyUp={props.handleChange}/>
+                <textarea type="text" name='input2' placeholder="Tell us what you love about this city.." onKeyUp={props.handleChange}></textarea>
+                {/* <input type="text" name='input3' onKeyUp={props.handleChange}/> */}
+                <input type="submit"  value="Post" />
             </form>
             <button onClick={props.handleCloseModal}> x </button>
         </Modal>
     )
 };
 
-export default LoginModal;
+export default PostModal;
