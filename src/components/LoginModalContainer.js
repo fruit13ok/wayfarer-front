@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 // import '.s/index.css';
 import LoginModal from './LoginModal';
 
@@ -7,12 +8,17 @@ class LoginModalContainer extends Component {
     super()
     this.state = {
       modalIsOpen: false,
-      input1: 'initial input1 string',
-      input2: 'initial input2 string',
-      input3: 'initial input3 string',
+      // input1: 'initial input1 string',
+      // input2: 'initial input2 string',
+      // input3: 'initial input3 string',
+
+      username:'',
+      password: '',
+      currentCity: '',
+      isLoggedIn: false
     }
   }
-  // App.js has a button to launch modal by set modalIsOpen state to true, LoginModal.js will listen to it
+  // this LoginModalCOntainer.js has a button to launch modal by set modalIsOpen state to true, LoginModal.js will listen to it
   handleOpenModal = () => {
     this.setState({ modalIsOpen: true });
   }
@@ -22,20 +28,54 @@ class LoginModalContainer extends Component {
   }
   // callback change states by multiple form inputs, 
   // target.name and [name] is build-in to match state name and form name attribute
-  handleChange = (event) => {
-    let name = event.target.name;
-    let value  = event.target.value;
+  handleInput = (event) => {
+    // let name = event.target.name;
+    // let value  = event.target.value;
     this.setState({
-      [name]: value
+      [event.target.name]: event.target.value
     });
   }
   // not doing much now, should use to launch something or pass state some where else
-  handleSubmit = (event) => {
-    console.log('input1: ',this.state.input1);
-    console.log('input2: ',this.state.input2);
-    console.log('input3: ',this.state.input3);
+  handleSignUp = (event) => {
+    console.log('input1: ',this.state.username);
+    console.log('input2: ',this.state.password);
+    console.log('input3: ',this.state.currentCity);
     event.preventDefault();
+      axios.post('http://localhost:3000/',
+        {
+          username: this.state.username,
+          password: this.state.password,
+          currentCity: this.state.currentCity
+        } )
+        .then(response => {
+          console.log('SUCCESS')
+          // localStorage.token=response.data.token
+          // this.setState({
+          //   isLoggedIn: true
+          // })
+        })
+        .catch(err => console.log(err))
   }
+
+  handleLogIn = (event) => {
+    event.preventDefault();
+    console.log('input1: ',this.state.username);
+    console.log('input2: ',this.state.password);
+    
+    axios.post('http://localhost:3000/', 
+    {
+      username: this.state.username,
+      password: this.state.password
+    })
+    .then(response => {
+    localStorage.token= response.data.token
+    this.setState({
+      isLoggedIn: true
+    })
+  })
+  .catch(err => console.log(err))
+  }
+
   render() {
     return (
       <div className="">
@@ -51,8 +91,9 @@ class LoginModalContainer extends Component {
         <LoginModal 
         modalIsOpen={this.state.modalIsOpen} 
         handleCloseModal={this.handleCloseModal}
-        handleChange={this.handleChange}
-        handleSubmit={this.handleSubmit} />
+        handleInput={this.handleInput}
+        handleSignUp={this.handleSignUp}
+        handleLogIn={this.handleLogIn} />
       </div>
     );
   }

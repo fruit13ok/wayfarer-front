@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Modal from 'react-modal';
 // import './.css';
 
@@ -15,25 +15,40 @@ import Modal from 'react-modal';
 // onRequestClose - Function that will be run when the modal is requested to be closed (either by clicking on overlay or pressing ESC)
 // className and overlayClassName apply style from LoginModal.css to this Modal
 // multiple input form need to have name attribute to identify which state
+
 Modal.setAppElement('#root')
-const LoginModal = (props) => {
+// const LoginModal = (props) => {
+
+class LoginModal extends Component {
+    render () {
     return (
         <Modal
-        isOpen={props.modalIsOpen}
+        isOpen={this.props.modalIsOpen}
         contentLabel="Example Modal"
-        onRequestClose={props.handleCloseModal}
+        onRequestClose={this.props.handleCloseModal}
         className="Modal"
         overlayClassName="Overlay"
         >
-            <form onSubmit={props.handleSubmit}>
-                <input type="text" name='input1' onKeyUp={props.handleChange}/>
-                <input type="text" name='input2' onKeyUp={props.handleChange}/>
-                <input type="text" name='input3' onKeyUp={props.handleChange}/>
-                <input type="submit"  value="Submit" />
+        SIGN UP
+            <form id="signUpForm">
+                <input type="text" name='username' placeholder="Username" onChange={this.props.handleInput}/>
+                {/* <input type="email" name='email' onChange={this.props.handleInput}/> */}
+                <input type="password" name='password' placeholder="Password" onChange={this.props.handleInput}/>
+                <input type="text" name='currentCity' placeholder="Current City" onChange={this.props.handleInput}/>
+                <input type="submit"  value="Sign Up!" onClick={this.props.handleSignUp}/>
             </form>
-            <button onClick={props.handleCloseModal}> x </button>
+
+            LOG IN
+            <form id="logInForm">
+                <input type="text" name='username' placeholder="Username" onChange={this.props.handleInput}/>
+                {/* <input type="email" name='email' onChange={this.props.handleInput}/> */}
+                <input type="password" name='password' placeholder="Password" onChange={this.props.handleInput}/>
+                <input type="submit"  value="Log In" onClick={this.props.handleLogIn}/>
+            </form>
+            <button onClick={this.props.handleCloseModal}> x </button>
         </Modal>
     )
-};
+}
+}
 
 export default LoginModal;
