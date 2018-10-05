@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
+import LoginModalContainer from './LoginModalContainer';
 
 class Nav extends Component {
- render() {
-   return (
+    render() {
+        let navBarItems = []
+        if(this.props.isLoggedIn) {
+            navBarItems.push(<li><a href=""> Cities List </a></li>)
+            navBarItems.push(<li><a href="erase jwt token, redir to landing"> Log Out </a></li>)
+            navBarItems.push(<li><a href="logged in user's profile view"> username </a></li>)
+            navBarItems.push(<li><a href=""> Users List (for development only)</a></li>)
+        }
+        else {
+           
+            navBarItems.push( <LoginModalContainer />)
+        }
+    return (
        <nav id="header-nav">
            <ul>
-               <li><a href=""> Sign Up </a></li>
-               <li><a href=""> Log In </a></li>
-               {/* If logged in hide the above and show the following:  */}
-               <li><a href=""> Cities List </a></li>
-               <li><a href=""> Users List (for development only)</a></li>
-               <li><a href="erase jwt token, redir to landing"> Log Out </a></li>
-               <li><a href="logged in user's profile view"> username </a></li>
+          
+            {navBarItems}
            </ul>
        </nav>
    );
