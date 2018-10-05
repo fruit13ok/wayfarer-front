@@ -1,16 +1,27 @@
 header {
-  display: flex; }
+  display: flex;
+  justify-content: space-between;
+}
 
 #carousel-container {
   display: flex;
   /* flex-direction: column; */
-  justify-content: center; }
+  justify-content: center;
+}
 
 #section-container {
-  display: flex; }
+  display: flex;
+}
 
 #footer-nav {
-  display: flex; }
+  display: flex;
+}
+
+#navAndSearch {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+}
 
 .Modal {
   position: absolute;
@@ -19,7 +30,8 @@ header {
   right: 20%;
   bottom: 20%;
   background-color: papayawhip;
-  color: lightsteelblue; }
+  color: lightsteelblue;
+}
 
 .Overlay {
   position: fixed;
@@ -28,21 +40,66 @@ header {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0);
-  color: slategray; }
+  color: slategray;
+}
 
 body {
   user-select: none;
-  -webkit-user-select: none; }
+  -webkit-user-select: none;
+}
 
 .react-carousel__navigation-button.react-carousel__navigation-button--previous,
 .react-carousel__navigation-button.react-carousel__navigation-button--next {
   background: #00f;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 #cityPage {
   display: flex;
   width: 100vw;
-  margin: 2em; }
+  margin: 2em;
+}
+
+.Modal {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  bottom: 20%;
+  background-color: papayawhip;
+  color: lightsteelblue;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: slategray;
+}
+
+#header-nav {
+  margin-right: 5rem;
+}
+#header-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#header-nav ul li {
+  float: left;
+}
+#header-nav ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+#header-nav ul li a:hover {
+  background-color: black;
+}
 
 aside {
   display: flex;
@@ -50,13 +107,16 @@ aside {
   background-color: grey;
   align-items: flex-start;
   width: 30vw;
-  border: .1em solid black; }
-  aside h1 {
-    margin: 1em 0 0 2em; }
+  border: 0.1em solid black;
+}
+aside h1 {
+  margin: 1em 0 0 2em;
+}
 
 article {
   width: 60vw;
-  border: .1em solid black; }
+  border: 0.1em solid black;
+}
 
 aside li {
   list-style: none;
@@ -64,29 +124,34 @@ aside li {
   padding: 1em 1.2em;
   margin: 1em 0;
   width: 20vw;
-  border: .1em solid black;
+  border: 0.1em solid black;
   border-radius: 20px;
   display: flex;
   justify-content: flex-start;
-  align-items: center; }
-  aside li img {
-    width: 5vw;
-    border: .1em solid black; }
+  align-items: center;
+}
+aside li img {
+  width: 5vw;
+  border: 0.1em solid black;
+}
 aside a {
   text-decoration: none;
   color: black;
   font-size: 1.5em;
-  padding-left: 1em; }
+  padding-left: 1em;
+}
 
 .cityHeaderWrapper {
   display: flex;
   justify-content: space-around;
-  height: 40vh; }
+  height: 40vh;
+}
 
 .cityHeaderImage {
-  border: .1em solid black;
+  border: 0.1em solid black;
   width: 40vw;
-  margin: 2em; }
+  margin: 2em;
+}
 
 .cityHeaderText {
   margin-top: 3em;
@@ -95,37 +160,45 @@ aside a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start; }
-  .cityHeaderText h1 {
-    margin: 0; }
-  .cityHeaderText h3 {
-    margin: .5em 0 0 0; }
+  align-items: flex-start;
+}
+.cityHeaderText h1 {
+  margin: 0;
+}
+.cityHeaderText h3 {
+  margin: 0.5em 0 0 0;
+}
 
 .cityPostsHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 2em; }
-  .cityPostsHeader a {
-    color: black;
-    text-decoration: none;
-    font-size: 3em; }
+  margin: 0 2em;
+}
+.cityPostsHeader a {
+  color: black;
+  text-decoration: none;
+  font-size: 3em;
+}
 
 .postContainer {
   display: flex;
-  border: .1em solid black;
+  border: 0.1em solid black;
   border-radius: 20px;
-  margin: 2em; }
+  margin: 2em;
+}
 
 .postContent {
   display: flex;
   flex-direction: column;
-  width: 40vw; }
+  width: 40vw;
+}
 
 .postImage {
   width: 10vw;
-  border: .1em solid black;
-  margin: 1em; }
+  border: 0.1em solid black;
+  margin: 1em;
+}
 
 .profilePic {
   background-repeat: no-repeat;
@@ -133,17 +206,47 @@ aside a {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  object-fit: cover; }
+  object-fit: cover;
+}
 
 .userProfInfo {
-  display: flex; }
+  display: flex;
+}
 
 .userName {
   margin: 1em;
-  width: 25%; }
+  width: 25%;
+}
 
 .userPosts {
   width: 75%;
-  margin: 2em; }
+  margin: 2em;
+}
+
+#header-nav {
+  margin-right: 5rem;
+}
+#header-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#header-nav ul li {
+  float: left;
+}
+#header-nav ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+#header-nav ul li a:hover {
+  background-color: black;
+}
+
+#myForm button:hover {
+  background-color: black;
+  color: white;
+}
 
 /*# sourceMappingURL=index.css.map */
