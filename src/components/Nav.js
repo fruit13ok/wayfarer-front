@@ -7,7 +7,7 @@ class Nav extends Component {
         let navBarItems = []
         if(this.props.isLoggedIn) {
             navBarItems.push(<li><a href=""> Cities List </a></li>)
-            navBarItems.push(<li><a href="erase jwt token, redir to landing"> Log Out </a></li>)
+            navBarItems.push(<li><a href="erase jwt token, redir to landing" onClick={this.props.handleLogOut}> Log Out </a></li>)
             navBarItems.push(<li><a href="logged in user's profile view"> username </a></li>)
             navBarItems.push(<li><a href=""> Users List (for development only)</a></li>)
         }

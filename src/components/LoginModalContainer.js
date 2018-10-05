@@ -37,11 +37,11 @@ class LoginModalContainer extends Component {
   }
   // not doing much now, should use to launch something or pass state some where else
   handleSignUp = (event) => {
-    console.log('input1: ',this.state.username);
-    console.log('input2: ',this.state.password);
-    console.log('input3: ',this.state.currentCity);
+    console.log('username: ',this.state.username);
+    console.log('password: ',this.state.password);
+    console.log('currentCity: ',this.state.currentCity);
     event.preventDefault();
-      axios.post('http://localhost:3001/signup',
+      axios.post('http://localhost:3001/users/signup',
         {
           username: this.state.username,
           password: this.state.password,
@@ -53,17 +53,16 @@ class LoginModalContainer extends Component {
           this.setState({
             isLoggedIn: true
           })
-          // console.log(this.state.isLoggedIn)
+          console.log('logged in:',this.state.isLoggedIn)
         })
         .catch(err => console.log(err))
   }
 
   handleLogIn = (event) => {
     event.preventDefault();
-    console.log('input1: ',this.state.username);
-    console.log('input2: ',this.state.password);
-    console.log('outside axios')
-    axios.post('http://localhost:3001/login', 
+    console.log('username: ',this.state.username);
+    console.log('password: ',this.state.password);
+    axios.post('http://localhost:3001/users/login', 
     {
       username: this.state.username,
       password: this.state.password
@@ -74,7 +73,7 @@ class LoginModalContainer extends Component {
     this.setState({
       isLoggedIn: true
       })
-      console.log(this.state.isLoggedIn)
+      console.log('logged in:', this.state.isLoggedIn)
     })
     .catch(err => console.log(err, 'hello')) 
   }    
