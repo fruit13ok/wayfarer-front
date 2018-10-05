@@ -9,10 +9,17 @@ import Main from './components/Main'
 
 
 class App extends Component {
+  constructor () {
+    super()
+
+    this.state = {
+      isLoggedIn:false
+    }
+  }
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header isLoggedIn={this.state.isLoggedIn}/>
         <Main />
         <Footer />
       </div>

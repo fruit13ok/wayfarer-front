@@ -10,8 +10,6 @@ class  Main extends Component {
   render() {
     return (
       <div>
-      <LoginModalContainer />
-
         <Switch>
           <Route path = "/cities" component={Cities} />
           <Route path = "/profile" component={Profiles} />
