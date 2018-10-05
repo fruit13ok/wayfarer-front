@@ -12,7 +12,6 @@ class Nav extends Component {
             navBarItems.push(<li><a href=""> Users List (for development only)</a></li>)
         }
         else {
-           
             navBarItems.push( <LoginModalContainer />)
         }
     return (
