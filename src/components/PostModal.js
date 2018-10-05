@@ -26,10 +26,10 @@ const PostModal = (props) => {
         overlayClassName="Overlay"
         >
             <form onSubmit={props.handleSubmit}>
-                <input type="text" name='input1' onKeyUp={props.handleChange}/>
-                <input type="text" name='input2' onKeyUp={props.handleChange}/>
-                <input type="text" name='input3' onKeyUp={props.handleChange}/>
-                <input type="submit"  value="Submit" />
+                <input type="text" name='input1' placeholder="Title" onKeyUp={props.handleChange}/>
+                <textarea type="text" name='input2' placeholder="Tell us what you love about this city.." onKeyUp={props.handleChange}></textarea>
+                {/* <input type="text" name='input3' onKeyUp={props.handleChange}/> */}
+                <input type="submit"  value="Post" />
             </form>
             <button onClick={props.handleCloseModal}> x </button>
         </Modal>
