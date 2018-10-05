@@ -43,17 +43,6 @@ header {
   color: slategray;
 }
 
-body {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.react-carousel__navigation-button.react-carousel__navigation-button--previous,
-.react-carousel__navigation-button.react-carousel__navigation-button--next {
-  background: #00f;
-  cursor: pointer;
-}
-
 #cityPage {
   display: flex;
   width: 100vw;
@@ -80,25 +69,12 @@ body {
   color: slategray;
 }
 
-#header-nav {
-  margin-right: 5rem;
-}
-#header-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-#header-nav ul li {
-  float: left;
-}
-#header-nav ul li a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-#header-nav ul li a:hover {
-  background-color: black;
+#carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  border: 5px solid red;
 }
 
 aside {

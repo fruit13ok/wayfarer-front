@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Nav from './Nav';
-import SearchBar from './SearchBar';
+import Nav from './Nav'
+import SearchBar from './SearchBar'
+
 
 class Header extends Component {
   render() {
@@ -8,7 +9,7 @@ class Header extends Component {
         <header>
             <img src="templogo.png" alt="Wayfarer Logo"/>
             <div id='navAndSearch'>
-                <Nav />
+                <Nav isLoggedIn={this.props.isLoggedIn}/>
                 <SearchBar />
             </div>
         </header>
