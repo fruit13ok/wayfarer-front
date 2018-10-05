@@ -1,61 +1,14 @@
 import React, { Component } from 'react';
-import Carousel from './Carousel'
+import LandingCarousel from './LandingCarousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 class  Landing extends Component {
 
-constructor (props) {
-    super(props);
-
-    this.state = {
-        scrollStepDistance: 3,
-        visibleIndex: 0
-    };
-    }
-
-    handleScrollToIndex = (index) => {
-    this.setState({
-        visibleIndex: index
-    });
-    }
-
 render() {
-    const data = new Array(15).fill(null);
-
-    const items = data.map((velue, index) => {
-        return <div
-            key={String(index)}
-            style={{
-            border: '1px solid #00f',
-            boxSizing: 'border-box',
-            display: 'block',
-            flexGrow: 1,
-            fontSize: '32px',
-            height: '100px',
-            lineHeight: '100px',
-            textAlign: 'center'
-        }}>{index}</div>;
-    });
-
     return (
         <section id="landingPage">
             <div id="carousel-container">
-            <Carousel
-            controlWidth={25}
-            firstVisibleIndex={this.state.visibleIndex}
-            itemMargin={10}
-            itemWidth={50}
-            onItemScroll={this.handleScrollToIndex}
-            scrollStepDistance={this.state.scrollStepDistance}
-            style={{
-            background: '#eee',
-            height: 100,
-            maxWidth: 1000
-            }}
-        >
-            {items}
-        </Carousel>
-                <p>CAROUSEL GOES HERE. SAMPLE IMAGE:</p>
-                <img src="" alt="sample image"/>
+            <LandingCarousel />
             </div>
             <h1>Wayfarer Twilight is...</h1>
             <div id="section-container">

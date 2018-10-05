@@ -167,15 +167,12 @@ article .postImage {
   color: slategray;
 }
 
-body {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.react-carousel__navigation-button.react-carousel__navigation-button--previous,
-.react-carousel__navigation-button.react-carousel__navigation-button--next {
-  background: #00f;
-  cursor: pointer;
+#carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  border: 5px solid red;
 }
 
 /*# sourceMappingURL=index.css.map */
