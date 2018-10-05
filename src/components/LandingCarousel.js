@@ -12,7 +12,7 @@ render() {
         infiniteLoop
         showThumbs={false} >
             <div>
-                <img src="../images/01.jpg" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1199px-Cat03.jpg" />
                 <p className="legend">Can't get the pics to show up yet :(</p>
             </div>
             <div>
