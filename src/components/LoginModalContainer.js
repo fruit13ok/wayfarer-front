@@ -41,7 +41,7 @@ class LoginModalContainer extends Component {
     console.log('input2: ',this.state.password);
     console.log('input3: ',this.state.currentCity);
     event.preventDefault();
-      axios.post('http://localhost:3000/',
+      axios.post('http://localhost:3001/',
         {
           username: this.state.username,
           password: this.state.password,
@@ -62,7 +62,7 @@ class LoginModalContainer extends Component {
     console.log('input1: ',this.state.username);
     console.log('input2: ',this.state.password);
     
-    axios.post('http://localhost:3000/', 
+    axios.post('http://localhost:3001/', 
     {
       username: this.state.username,
       password: this.state.password
