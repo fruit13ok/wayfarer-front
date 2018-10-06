@@ -15,13 +15,24 @@ class Profiles extends Component {
 
         UserModel.getInfo(this.props.match.params.name)
             .then(response=>{
-                this.setState({user: response.data})
+                console.log(response)
+                if (!response.data) {
+                    this.setState({error: 1})
+                } else {
+                    this.setState({user: response.data})
+                }
             })
             .catch(err =>{
+                this.setState({error: 2})
                 console.log("Profile did not mount" + err);
             })
       }
   render() {
+      if (this.state.error) {
+          return (
+              <p>"Error"</p>
+          )
+      }
     return (
         <div className ="userProfInfo">
             <div className="userName">
@@ -30,7 +41,7 @@ class Profiles extends Component {
                 <h2>Current City:{this.state.user.currentCity}</h2>
                 <h2>Member Since:{this.state.user.dateJoined} </h2>
             </div>
-            <UserPostsList/>
+            <UserPostsList/> 
         </div>
     );
   }
