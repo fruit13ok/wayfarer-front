@@ -1,19 +1,42 @@
 import React, { Component } from 'react';
 import CityPostsList from './CityPostsList';
 import PostModalContainer from './PostModalContainer';
+import PostModel from '../models/PostModel';
 
 class CityMain extends Component {
-  render() {
-    return (
-        <div className="cityPostsWrapper">
-            <div className="cityPostsHeader">
-                <h1>Posts</h1>
-                <PostModalContainer />
+    constructor(){
+        super()
+        
+        this.state = {
+            posts: []
+        }
+    }
+    
+    componentDidMount(){
+        this.fetchData()
+    }
+
+    fetchData(){
+        PostModel.all()
+        .then( (res) => {
+            this.setState ({
+                posts: res.data.posts,
+                post: ''
+            })
+        })
+    }
+
+    render() {
+        return (
+            <div className="cityPostsWrapper">
+                <div className="cityPostsHeader">
+                    <h1>Posts</h1>
+                    <PostModalContainer />
+                </div>
+                <CityPostsList posts={this.state.posts}/>
             </div>
-            <CityPostsList />
-        </div>
-    );
-  }
+        );
+    }
 }
 
 export default CityMain;

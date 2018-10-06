@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import CityHeader from './CityHeader'
 import CityMain from './CityMain'
 
-
 class CitiesArticle extends Component {
   render() {
     return (
@@ -11,7 +10,7 @@ class CitiesArticle extends Component {
           <CityMain />
         </article>
     );
-  }
+  } 
 }
 
 export default CitiesArticle;
