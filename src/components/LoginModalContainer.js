@@ -49,7 +49,9 @@ class LoginModalContainer extends Component {
         } )
         .then(response => {
           // console.log('SUCCESS')
+           console.log('Rep.data.tok' + response.data.token)
           localStorage.token=response.data.token
+          console.log('Local Storage' + localStorage.token)
           this.setState({
             isLoggedIn: true
           })
@@ -69,9 +71,13 @@ class LoginModalContainer extends Component {
     })
     .then(response => {
       // console.log(response.data.token)
-    localStorage.token= response.data.token
-    this.setState({
-      isLoggedIn: true
+
+      console.log('Rep.data.tok' + response.data.token)
+      localStorage.token=response.data.token
+      console.log('Local Storage' + localStorage.token)
+      
+      this.setState({
+        isLoggedIn: true
       })
       console.log('logged in:', this.state.isLoggedIn)
     })
