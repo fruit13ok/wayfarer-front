@@ -2,13 +2,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items:center;
-
     h1 {
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 2.9em;
         text-transform: uppercase;
         margin-left:1em;
         letter-spacing:4px;
+        &:hover {
+            color:red;
+        }
     }
 }
 

@@ -49,7 +49,7 @@ class LoginModalContainer extends Component {
         } )
         .then(response => {
           // console.log('SUCCESS')
-           console.log('Rep.data.tok' + response.data.token)
+          console.log('Rep.data.tok' + response.data.token)
           localStorage.token=response.data.token
           console.log('Local Storage' + localStorage.token)
           this.setState({
@@ -86,27 +86,15 @@ class LoginModalContainer extends Component {
 
   render() {
     return (
-      <div className="">
-        {/* <p>inside LoginModalCONTAINER.js</p>
-        <p>{this.state.input1}</p>
-        <p>{this.state.input2}</p>
-        <p>{this.state.input3}</p> */}
-        <button id="signIn"
-          onClick={this.handleOpenModal}
-        >
-          Sign In
-        </button>
-        <button id="signIn"
-          onClick={this.handleOpenModal}
-        >
-          Login
-        </button>
+      <div>
+        <button id="signIn" onClick={this.handleOpenModal}>Sign In</button>
+        <button id="signIn"onClick={this.handleOpenModal}>Login</button>
         <LoginModal 
-        modalIsOpen={this.state.modalIsOpen} 
-        handleCloseModal={this.handleCloseModal}
-        handleInput={this.handleInput}
-        handleSignUp={this.handleSignUp}
-        handleLogIn={this.handleLogIn}
+          modalIsOpen={this.state.modalIsOpen} 
+          handleCloseModal={this.handleCloseModal}
+          handleInput={this.handleInput}
+          handleSignUp={this.handleSignUp}
+          handleLogIn={this.handleLogIn}
         />
       </div>
     );

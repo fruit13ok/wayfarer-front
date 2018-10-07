@@ -6,9 +6,9 @@ class Profiles extends Component {
     constructor(){
         super()
         this.state = {
-          user: {},
+        user: {},
         }
-      }
+    }
 
     componentDidMount = () =>{
         console.log('Profile Mounted')
@@ -20,20 +20,20 @@ class Profiles extends Component {
             .catch(err =>{
                 console.log("Profile did not mount" + err);
             })
-      }
-  render() {
-    return (
-        <div className ="userProfInfo">
-            <div className="userName">
-                <img className="profilePic"  alt ="" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" />
-                <h2>{this.props.match.params.name}</h2>
-                <h2>{this.state.user.currentCity}</h2>
-                <h2>Member Since: {this.state.user.dateJoined} </h2>
+    }
+    render() {
+        return (
+            <div className ="userProfInfo">
+                <div className="userName">
+                    <img className="profilePic"  alt ="" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" />
+                    <h2>{this.props.match.params.name}</h2>
+                    <h2>{this.state.user.currentCity}</h2>
+                    <h2>Member Since: {this.state.user.dateJoined} </h2>
+                </div>
+                <UserPostsList/>
             </div>
-            <UserPostsList/>
-        </div>
-    );
-  }
+        );
+    }
 }
 
 export default Profiles;

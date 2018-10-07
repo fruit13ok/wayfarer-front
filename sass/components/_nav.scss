@@ -4,7 +4,7 @@
         display:flex;
         li {
             list-style: none;
-            margin: 0 1em;
+            margin: 0 1.5em;
             a {
                 color:black;
                 font-size:1.3em;
@@ -19,26 +19,21 @@
     }
 }
 
-
-// #header-nav{
-//     margin-right: 5rem;
-//     ul {
-//         list-style-type: none;
-//         margin: 0;
-//         padding: 0;
-//         overflow: hidden;
-//         li {
-//             float: left;
-//         }
-//         li a {
-//             display: block;
-//             text-align: center;
-//             text-decoration: none;
-//         }
-//         li a:hover {
-//             background-color: black;
-//         }
-//     }
-// }
+#myForm{
+    button {
+        border:none;
+        outline:none;
+    }
+    button:hover {
+        color: red;
+    }
+    input {
+        margin-left:1.5em;
+        padding:.2em .3em;
+        border:none;
+        border-bottom:1px solid black;
+        outline:none;
+    }
+}
 
 

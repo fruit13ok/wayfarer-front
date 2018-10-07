@@ -62,16 +62,12 @@ class PostModalContainer extends Component {
         <p>{this.state.input1}</p>
         <p>{this.state.input2}</p>
         <p>{this.state.input3}</p> */}
-        <button id="plus"
-          onClick={this.handleOpenModal}
-        >
-          +
-        </button>
+        <button id="plus"onClick={this.handleOpenModal}>+</button>
         <PostModal 
-        modalIsOpen={this.state.modalIsOpen} 
-        handleCloseModal={this.handleCloseModal}
-        handleInput={this.handleInput}
-        handleAddPost={this.handleAddPost} />
+          modalIsOpen={this.state.modalIsOpen} 
+          handleCloseModal={this.handleCloseModal}
+          handleInput={this.handleInput}
+          handleAddPost={this.handleAddPost} />
       </div>
     );
   }
