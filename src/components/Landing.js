@@ -9,7 +9,7 @@ class  Landing extends Component {
                 <div id="carousel-container">
                     <LandingCarousel />
                 </div>
-                <h1>Wayfarer Twilight is...</h1>
+                <h1>Wayfarer is...</h1>
                 <div id="section-container">
                     <div>
                         <h2> Section 1</h2>
