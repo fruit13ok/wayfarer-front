@@ -2,8 +2,8 @@
     margin: 0 2em;
     ul {
         display:flex;
-        li {
-            list-style: none;
+        a {
+            text-decoration:none;
             margin: 0 1.5em;
             color:#7b7b7b;
             font-size:1.3em;
@@ -11,7 +11,7 @@
             font-family: 'Open Sans Condensed', sans-serif;
             letter-spacing:2px;
             &:hover {
-                color:red;
+                color:#feda6a;
             }
         }
     }
@@ -23,9 +23,6 @@
         outline:none;
         background-color:black;
     }
-    button:hover {
-        color: red;
-    }
     input {
         margin-left:1.5em;
         padding:.2em .3em;
@@ -33,10 +30,14 @@
         background-color:black;
         border-bottom: 1px solid white;
         outline:none;
+        color:white;
     }
     .fa-search {
         background-color:black;
         color:white;
+        &:hover {
+            color:#feda6a;
+        }
     }
 }
 
