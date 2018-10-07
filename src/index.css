@@ -26,33 +26,34 @@ header {
   margin: 0 2em; }
   #header-nav ul {
     display: flex; }
-    #header-nav ul li {
-      list-style: none;
+    #header-nav ul a {
+      text-decoration: none;
       margin: 0 1.5em;
       color: #7b7b7b;
       font-size: 1.3em;
       text-transform: uppercase;
       font-family: 'Open Sans Condensed', sans-serif;
       letter-spacing: 2px; }
-      #header-nav ul li:hover {
-        color: red; }
+      #header-nav ul a:hover {
+        color: #feda6a; }
 
 #myForm button {
   border: none;
   outline: none;
   background-color: black; }
-#myForm button:hover {
-  color: red; }
 #myForm input {
   margin-left: 1.5em;
   padding: .2em .3em;
   border: none;
   background-color: black;
   border-bottom: 1px solid white;
-  outline: none; }
+  outline: none;
+  color: white; }
 #myForm .fa-search {
   background-color: black;
   color: white; }
+  #myForm .fa-search:hover {
+    color: #feda6a; }
 
 #footer-nav {
   background-color: black;

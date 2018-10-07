@@ -48,7 +48,7 @@ class LoginModalContainer extends Component {
           currentCity: this.state.currentCity
         } )
         .then(response => {
-          // console.log('SUCCESS')
+          console.log('SUCCESS')
           console.log('Rep.data.tok' + response.data.token)
           localStorage.token=response.data.token
           console.log('Local Storage' + localStorage.token)
@@ -56,6 +56,9 @@ class LoginModalContainer extends Component {
             isLoggedIn: true
           })
           console.log('logged in:',this.state.isLoggedIn)
+          if (this.state.isLoggedIn == true){
+            console.log("REDIRECT");
+          }
         })
         .catch(err => console.log(err))
   }
