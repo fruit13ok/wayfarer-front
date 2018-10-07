@@ -7,7 +7,8 @@ class CitiesAside extends Component {
     return (
         <aside>
             <h1>Cities</h1>
-            <CityList />
+            <CityList cities={this.props.cities} setCurrSelectedCity={this.props.setCurrSelectedCity}/>
+
         </aside>
     );
   }

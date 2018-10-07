@@ -15,7 +15,7 @@ class  Main extends Component {
           <Route path = "/profile/:name" component={Profiles} />
           <Route path = "/" component={Landing} />
         </Switch>
-
+        
         </div>
     );
   }
