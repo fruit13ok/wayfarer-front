@@ -2,6 +2,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: black;
+  padding: 0.6em 0;
 }
 header h1 {
   font-family: "Open Sans Condensed", sans-serif;
@@ -9,9 +11,12 @@ header h1 {
   text-transform: uppercase;
   margin-left: 1em;
   letter-spacing: 4px;
+  color: #7b7b7b;
+  padding: 0;
+  margin-bottom: 0;
 }
 header h1:hover {
-  color: red;
+  color: #feda6a;
 }
 
 #navAndSearch {
@@ -58,14 +63,16 @@ header h1:hover {
 }
 
 #footer-nav {
+  background-color: black;
   display: flex;
   justify-content: flex-end;
   padding-right: 1em;
   align-items: flex-end;
   padding-bottom: 0.5em;
+  color: #3d3d3d;
 }
 #footer-nav i:hover {
-  color: red;
+  color: #feda6a;
 }
 
 .Modal {
@@ -97,10 +104,12 @@ header h1:hover {
   font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 2px;
   outline: none;
+  background-color: black;
+  color: #7b7b7b;
 }
 
 #signIn:hover {
-  color: red;
+  color: #feda6a;
 }
 
 #signUpForm {
@@ -122,7 +131,7 @@ header h1:hover {
   outline: none;
 }
 #signUpForm #signUpInput:hover {
-  color: red;
+  color: #feda6a;
 }
 
 #logInForm {
@@ -164,6 +173,7 @@ header h1:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: black;
 }
 #landingPage h1 {
   margin-top: 2em;
@@ -171,6 +181,7 @@ header h1:hover {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 3.5em;
   letter-spacing: 4px;
+  color: #565656;
 }
 #landingPage #carousel-container {
   width: 100vw;
@@ -180,6 +191,7 @@ header h1:hover {
   width: 100vw;
   height: 90vh;
   object-fit: cover;
+  opacity: 0.6;
 }
 #landingPage #section-container {
   display: flex;
@@ -200,10 +212,12 @@ header h1:hover {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 2em;
   letter-spacing: 4px;
+  color: #3d3d3d;
 }
 #landingPage #section-container p {
   font-family: "Oranienbaum", serif;
   font-size: 1.5em;
+  color: #3d3d3d;
 }
 
 .userProfInfo {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import carousel1 from '../images/carousel1.jpg';
 import carousel2 from '../images/carousel2.jpg';
 import carousel3 from '../images/carousel3.jpg';
+import carousel4 from '../images/carousel4.jpg';
 import { Carousel } from 'react-responsive-carousel';
 
 class  LandingCarousel extends Component {
@@ -15,6 +16,9 @@ class  LandingCarousel extends Component {
                 showThumbs={false} >
                 <div>
                     <img src={carousel2} />
+                </div>
+                <div>
+                    <img src={carousel4} />
                 </div>
                 <div>
                     <img src={carousel3}/>

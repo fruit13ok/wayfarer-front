@@ -1,10 +1,12 @@
 #footer-nav {
+    background-color:black;
     display: flex;  
     justify-content: flex-end;
     padding-right:1em;
     align-items: flex-end;
     padding-bottom:.5em;
+    color:#3d3d3d;
     i:hover{
-        color:red;
+        color:#feda6a;
     }
 }
