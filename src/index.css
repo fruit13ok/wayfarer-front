@@ -10,12 +10,51 @@ header h1 {
   margin-left: 1em;
   letter-spacing: 4px;
 }
+header h1:hover {
+  color: red;
+}
 
 #navAndSearch {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-right: 2em;
+}
+
+#header-nav {
+  margin: 0 2em;
+}
+#header-nav ul {
+  display: flex;
+}
+#header-nav ul li {
+  list-style: none;
+  margin: 0 1.5em;
+}
+#header-nav ul li a {
+  color: black;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 2px;
+}
+#header-nav ul li a:hover {
+  color: red;
+}
+
+#myForm button {
+  border: none;
+  outline: none;
+}
+#myForm button:hover {
+  color: red;
+}
+#myForm input {
+  margin-left: 1.5em;
+  padding: 0.2em 0.3em;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
 }
 
 #footer-nav {
@@ -25,6 +64,9 @@ header h1 {
   align-items: flex-end;
   padding-bottom: 0.5em;
 }
+#footer-nav i:hover {
+  color: red;
+}
 
 .Modal {
   position: absolute;
@@ -36,6 +78,8 @@ header h1 {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
+  outline: none;
+  box-shadow: 3px 3px 5px black;
 }
 
 .Overlay {
@@ -52,6 +96,7 @@ header h1 {
   text-transform: uppercase;
   font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 2px;
+  outline: none;
 }
 
 #signIn:hover {
@@ -74,6 +119,7 @@ header h1 {
 }
 #signUpForm #signUpInput {
   border: none;
+  outline: none;
 }
 #signUpForm #signUpInput:hover {
   color: red;
@@ -95,6 +141,7 @@ header h1 {
 }
 #logInForm #logInInput {
   border: none;
+  outline: none;
 }
 #logInForm #logInInput:hover {
   color: red;
@@ -104,96 +151,7 @@ header h1 {
   width: 2em;
   border: none;
   font-size: 1.5em;
-}
-
-#closeModal:hover {
-  color: red;
-}
-
-#cityPage {
-  display: flex;
-  width: 100vw;
-  margin: 2em;
-}
-
-.Modal {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  right: 20%;
-  bottom: 20%;
-  background-color: white;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-}
-
-.Overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-#signIn {
-  border: none;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  font-family: "Open Sans Condensed", sans-serif;
-  letter-spacing: 2px;
-}
-
-#signIn:hover {
-  color: red;
-}
-
-#signUpForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin: 1em 0;
-}
-#signUpForm input {
-  width: 20vw;
-  margin: 0.3em 0;
-  padding: 0.2em 0.3em;
-  border: none;
-  border: 1px solid black;
-}
-#signUpForm #signUpInput {
-  border: none;
-}
-#signUpForm #signUpInput:hover {
-  color: red;
-}
-
-#logInForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin: 1em 0;
-}
-#logInForm input {
-  width: 20vw;
-  margin: 0.3em 0;
-  padding: 0.2em 0.3em;
-  border: none;
-  border: 1px solid black;
-}
-#logInForm #logInInput {
-  border: none;
-}
-#logInForm #logInInput:hover {
-  color: red;
-}
-
-#closeModal {
-  width: 2em;
-  border: none;
-  font-size: 1.5em;
+  outline: none;
 }
 
 #closeModal:hover {
@@ -216,11 +174,11 @@ header h1 {
 }
 #landingPage #carousel-container {
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
 }
 #landingPage #carousel-container img {
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   object-fit: cover;
 }
 #landingPage #section-container {
@@ -248,24 +206,49 @@ header h1 {
   font-size: 1.5em;
 }
 
-aside {
-  margin-top: 2em;
+.userProfInfo {
+  display: flex;
+  margin-top: 6em;
+  margin-bottom: 7em;
+}
+.userProfInfo .userName {
+  margin: 3em;
+  width: 25vw;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 30vw;
+  justify-content: center;
+  align-items: center;
 }
-aside h1 {
-  margin: 1em 0 0 2em;
+.userProfInfo .userName h2 {
   font-family: "Oranienbaum", serif;
+  margin: 0.25em 0;
   letter-spacing: 2px;
   text-align: center;
-  text-transform: uppercase;
+}
+.userProfInfo .profilePic {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 3em;
 }
 
-article {
-  margin-top: 2em;
-  width: 60vw;
+.userPosts {
+  width: 50vw;
+}
+.userPosts h3 {
+  text-transform: uppercase;
+  font-family: "Oranienbaum", serif;
+  font-size: 2em;
+  letter-spacing: 4px;
+}
+
+#cityPage {
+  display: flex;
+  width: 100vw;
+  margin: 2em;
 }
 
 aside li {
@@ -291,6 +274,26 @@ aside a {
   text-transform: uppercase;
   font-family: "Oranienbaum", serif;
   letter-spacing: 2px;
+}
+
+aside {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30vw;
+}
+aside h1 {
+  margin: 1em 0 0 2em;
+  font-family: "Oranienbaum", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+article {
+  margin-top: 2em;
+  width: 60vw;
 }
 
 .cityHeaderWrapper {
@@ -416,78 +419,6 @@ aside a {
 }
 #plus:hover {
   color: red;
-}
-
-.userProfInfo {
-  display: flex;
-  margin-top: 6em;
-  margin-bottom: 7em;
-}
-.userProfInfo .userName {
-  margin: 3em;
-  width: 25vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.userProfInfo .userName h2 {
-  font-family: "Oranienbaum", serif;
-  margin: 0.25em 0;
-  letter-spacing: 2px;
-  text-align: center;
-}
-.userProfInfo .profilePic {
-  background-repeat: no-repeat;
-  background-position: 50%;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 3em;
-}
-
-.userPosts {
-  width: 50vw;
-}
-.userPosts h3 {
-  text-transform: uppercase;
-  font-family: "Oranienbaum", serif;
-  font-size: 2em;
-  letter-spacing: 4px;
-}
-
-#header-nav {
-  margin: 0 2em;
-}
-#header-nav ul {
-  display: flex;
-}
-#header-nav ul li {
-  list-style: none;
-  margin: 0 1em;
-}
-#header-nav ul li a {
-  color: black;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  font-family: "Open Sans Condensed", sans-serif;
-  letter-spacing: 2px;
-}
-#header-nav ul li a:hover {
-  color: red;
-}
-
-#myForm button {
-  border: none;
-}
-#myForm button:hover {
-  color: red;
-}
-#myForm input {
-  padding: 0.2em 0.3em;
-  border: none;
-  border-bottom: 1px solid black;
 }
 
 /*# sourceMappingURL=index.css.map */

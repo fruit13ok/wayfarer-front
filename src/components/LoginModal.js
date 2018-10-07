@@ -21,33 +21,34 @@ Modal.setAppElement('#root')
 
 class LoginModal extends Component {
     render () {
-    return (
-        <Modal
-        isOpen={this.props.modalIsOpen}
-        contentLabel="Example Modal"
-        onRequestClose={this.props.handleCloseModal}
-        className="Modal"
-        overlayClassName="Overlay"
-        >
-        <button id="closeModal" onClick={this.props.handleCloseModal}> x </button>
-        <form id="signUpForm">
-            <h4>SIGN UP</h4>
-            <input type="text" name='username' placeholder="Username" onChange={this.props.handleInput}/>
-            <input type="password" name='password' placeholder="Password" onChange={this.props.handleInput}/>
-            <input type="text" name='currentCity' placeholder="Current City" onChange={this.props.handleInput}/>
-            <input id="signUpInput"type="submit"  value="Submit" onClick={this.props.handleSignUp}/>
-        </form>
+        return (
+            <Modal 
+                isOpen={this.props.modalIsOpen} 
+                contentLabel="Example Modal"
+                onRequestClose={this.props.handleCloseModal} 
+                className="Modal"
+                overlayClassName="Overlay">
 
-        <form id="logInForm">
-            <h4>LOG IN</h4>
-            <input type="text" name='username' placeholder="Username" onChange={this.props.handleInput}/>
-            {/* <input type="email" name='email' onChange={this.props.handleInput}/> */}
-            <input type="password" name='password' placeholder="Password" onChange={this.props.handleInput}/>
-            <input id="logInInput" type="submit"  value="Submit" onClick={this.props.handleLogIn}/>
-        </form>
-        </Modal>
-    )
-}
+                <button id="closeModal" onClick={this.props.handleCloseModal}> x </button>
+
+                <form id="signUpForm">
+                    <h4>SIGN UP</h4>
+                    <input type="text" name='username' placeholder="Username" onChange={this.props.handleInput} required/>
+                    <input type="password" name='password' placeholder="Password" onChange={this.props.handleInput} required/>
+                    <input type="text" name='currentCity' placeholder="Current City" onChange={this.props.handleInput} required/>
+                    <input id="signUpInput"type="submit"  value="Submit" onClick={this.props.handleSignUp}/>
+                </form>
+
+                <form id="logInForm">
+                    <h4>LOG IN</h4>
+                    <input type="text" name='username' placeholder="Username" onChange={this.props.handleInput} required/>
+                    <input type="password" name='password' placeholder="Password" onChange={this.props.handleInput} required/>
+                    <input id="logInInput" type="submit"  value="Submit" onClick={this.props.handleLogIn}/>
+                </form>
+
+            </Modal>
+        )
+    }
 }
 
 export default LoginModal;
