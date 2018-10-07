@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
+import Nav from './Nav'
+import SearchBar from './SearchBar'
 
 
 class Header extends Component {
+    
+    handleLogOut = () => {
+        this.setState({
+          email: '',
+          password: '',
+          isLoggedIn: false
+        })
+        localStorage.clear()
+      }
+
   render() {
+      console.log(this.props.isLoggedIn)
     return (
         <header>
-            <img src="templogo.png" alt="Wayfarer Logo"/>
-            <nav id="header-nav">
-                <ul>
-                    <li><a href=""> Sign Up </a></li>
-                    <li><a href=""> Log In </a></li>
-                    {/* If logged in hide the above and show the following:  */}
-                    <li><a href=""> Cities List </a></li>
-                    <li><a href=""> Users List (for development only)</a></li>
-                    <li><a href="erase jwt token, redir to landing"> Log Out </a></li>
-                    <li><a href="logged in user's profile view"> username </a></li>
-                </ul>
-            </nav>
-            {/* If logged in, show search bar */}
-            <form>
-                <input type="search" placeholder="Search Cities"/>
-                <button onclick="">GO!</button>
-            </form>
+            <h1>Wayfarer</h1>
+            <div id='navAndSearch'>
+                <Nav isLoggedIn={this.props.isLoggedIn} handleLogOut={this.handleLogOut}/>
+                <SearchBar />
+            </div>
         </header>
     );
   }

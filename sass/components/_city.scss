@@ -1,0 +1,26 @@
+aside {
+    li {
+        list-style: none;
+        padding:1em 1.2em;
+        margin:1em 0;
+        width:20vw;
+        border-radius: 20px;
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            width:5vw;
+            height:5vh;
+            border: .1em solid black;
+        }
+    }
+    a {
+        text-decoration: none;
+        color:black;
+        font-size: 1.3em;
+        padding-left:1em;
+        text-transform: uppercase;
+        font-family:'Oranienbaum', serif;
+        letter-spacing:2px;
+    }
+}
