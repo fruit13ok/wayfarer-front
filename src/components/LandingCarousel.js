@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import carousel1 from '../images/carousel1.jpg';
+import carousel2 from '../images/carousel2.jpg';
+import carousel3 from '../images/carousel3.jpg';
+
 import { Carousel } from 'react-responsive-carousel';
 
 
@@ -10,34 +14,16 @@ render() {
         autoPlay
         useKeyboardArrows
         infiniteLoop
+        showStatus={false}
         showThumbs={false} >
             <div>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1199px-Cat03.jpg" />
-                <p className="legend">Can't get the pics to show up yet :(</p>
+                <img src={carousel2} />
             </div>
             <div>
-                <img src="../images/02.jpg" />
+                <img src={carousel3}/>
             </div>
             <div>
-                <img src="../images/03.jpg" />
-            </div>
-            <div>
-                <img src="../images/04.jpg" />
-            </div>
-            <div>
-                <img src="../images/05.jpg" />
-            </div>
-            <div>
-                <img src="../images/06.jpg" />
-            </div>
-            <div>
-                <img src="../images/07.jpg" />
-            </div>
-            <div>
-                <img src="../images/08.jpg" />
-            </div>
-            <div>
-                <img src="../images/09.jpg" />
+                <img src={carousel1} />
             </div>
         </Carousel>
     );

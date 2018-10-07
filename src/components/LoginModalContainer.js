@@ -91,10 +91,15 @@ class LoginModalContainer extends Component {
         <p>{this.state.input1}</p>
         <p>{this.state.input2}</p>
         <p>{this.state.input3}</p> */}
-        <button
+        <button id="signIn"
           onClick={this.handleOpenModal}
         >
-          Sign In / Login
+          Sign In
+        </button>
+        <button id="signIn"
+          onClick={this.handleOpenModal}
+        >
+          Login
         </button>
         <LoginModal 
         modalIsOpen={this.state.modalIsOpen} 

@@ -1,0 +1,36 @@
+
+#addPost {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4.5em 0;
+    input {
+        width:20vw;
+        margin: .3em 0;
+        padding:.2em .3em;
+        border:none;
+        border:1px solid black;
+    }
+    textarea {
+        width:20vw;
+        margin: .3em 0;
+        padding:.2em .3em;
+        border:none;
+        border:1px solid black;
+    }
+    #addPostInput {
+        border:none;
+    }
+    #addPostInput:hover {
+        color:red;;
+    }
+}
+
+#closeModal {
+    width:2em;
+    border:none;
+    font-size: 1.5em;
+}
+#closeModal:hover {
+    color:red;
+}

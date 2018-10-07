@@ -1,24 +1,20 @@
 header {
     display: flex;
     justify-content: space-between;
-}
+    align-items:center;
 
-#carousel-container {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-}
-
-#section-container {
-    display: flex;
-}
-
-#footer-nav {
-    display: flex;
+    h1 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 2.9em;
+        text-transform: uppercase;
+        margin-left:1em;
+        letter-spacing:4px;
+    }
 }
 
 #navAndSearch {
     display: flex;
     justify-content: flex-end;
-    justify-content: space-between;
+    align-items: center;
+    margin-right: 2em;
 }

@@ -6,7 +6,7 @@ class  UserPostsList extends Component {
   render() {
     return (
         <div className="userPosts">
-            <h3>Posts by Username</h3>
+            <h3>Posts</h3>
             <ul>
                 <Post />
             </ul>

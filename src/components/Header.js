@@ -18,7 +18,7 @@ class Header extends Component {
       console.log(this.props.isLoggedIn)
     return (
         <header>
-            <img src="templogo.png" alt="Wayfarer Logo"/>
+            <h1>Wayfarer</h1>
             <div id='navAndSearch'>
                 <Nav isLoggedIn={this.props.isLoggedIn} handleLogOut={this.handleLogOut}/>
                 <SearchBar />

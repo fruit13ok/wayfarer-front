@@ -9,8 +9,9 @@ class SearchBar extends Component {
         myForm = (
             <form id='myForm'>
                 
-                <input type="search" placeholder="Search Cities"/>
-                <button onClick="">GO!</button>
+                <input type="search" placeholder="Search ..."/>
+                
+                <button onClick=""><i class="fas fa-search"></i></button>
             </form>
         )
     } else {

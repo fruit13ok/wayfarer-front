@@ -12,15 +12,14 @@ class PostModal extends Component {
         className="Modal"
         overlayClassName="Overlay"
         >
-        ADD POST
+            <button id="closeModal" onClick={this.props.handleCloseModal}> x </button>
             <form id="addPost">
+                <h1>ADD POST</h1>
                 <input type="text" name='title' placeholder="Title" onChange={this.props.handleInput}/>
-                <input type="text" name='body' placeholder="Body" onChange={this.props.handleInput}/>
+                <textarea type="text" name='body' placeholder="Body" onChange={this.props.handleInput}></textarea>
                 <input type="image" />
-                <input type="submit"  value="Add Post" onClick={this.props.handleAddPost}/>
+                <input id="addPostInput"type="submit"  value="Add Post" onClick={this.props.handleAddPost}/>
             </form>
-
-            <button onClick={this.props.handleCloseModal}> x </button>
         </Modal>
     )
 }

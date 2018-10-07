@@ -2,6 +2,7 @@
     display:flex;
     justify-content: space-around;
     height:40vh;
+    margin-bottom:3em;
 }
 .cityHeaderImage {
     border: .1em solid black;
@@ -17,9 +18,15 @@
     justify-content: flex-start;
     align-items: flex-start;
     h1 {
+        font-family:'Oranienbaum', serif;
+        letter-spacing:2px;
+        text-align:center;
         margin:0;
     }
     h3 {
+        font-family:'Oranienbaum', serif;
+        letter-spacing:2px;
+        text-align:center;
         margin: .5em 0 0 0;
     }
 }

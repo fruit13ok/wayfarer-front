@@ -4,8 +4,10 @@
     left: 20%;
     right: 20%;
     bottom: 20%;
-    background-color: papayawhip;
-    color: lightsteelblue;
+    background-color: white;
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
 }
 
 .Overlay {
@@ -14,6 +16,67 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0);
-    color: slategray;
+}
+
+#signIn{
+    border:none;
+    font-size:1.3em;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing:2px;
+}
+#signIn:hover{
+    color:red;
+}
+
+#signUpForm {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0;
+    input {
+        width:20vw;
+        margin: .3em 0;
+        padding:.2em .3em;
+        border:none;
+        border:1px solid black;
+    }
+    #signUpInput {
+        border:none;
+    }
+    #signUpInput:hover {
+        color:red;;
+    }
+}
+
+
+#logInForm {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0;
+    input {
+        width:20vw;
+        margin: .3em 0;
+        padding:.2em .3em;
+        border:none;
+        border:1px solid black;
+    }
+    #LogInInput {
+        border:none;
+    }
+    #logInInput:hover {
+        color:red;;
+    }
+}
+
+#closeModal {
+    width:2em;
+    border:none;
+    font-size: 1.5em;
+}
+#closeModal:hover {
+    color:red;
 }

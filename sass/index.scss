@@ -1,4 +1,5 @@
 @import './components/_header';
+@import './components/_footer';
 
 @import './components/_loginmodal';
 
@@ -6,6 +7,8 @@
 @import './components/_loginmodal';
 
 @import './components/_landing';
+
+
 
 @import './components/_citiesAside';
 @import './components/_citiesArticle';
@@ -15,6 +18,9 @@
 @import './components/_cityMain';
 
 @import './components/_post';
+@import './components/postModal';
+@import './components/_postModalContainer';
+
 
 @import './components/_profiles';
 @import './components/_userPostsList';
