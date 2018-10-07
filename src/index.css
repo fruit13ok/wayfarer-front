@@ -21,11 +21,9 @@ header h1 {
 #footer-nav {
   display: flex;
   justify-content: flex-end;
-  padding-right: 2em;
+  padding-right: 1em;
   align-items: flex-end;
-  height: 5vh;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 0.5em;
 }
 
 .Modal {
@@ -95,7 +93,7 @@ header h1 {
   border: none;
   border: 1px solid black;
 }
-#logInForm #LogInInput {
+#logInForm #logInInput {
   border: none;
 }
 #logInForm #logInInput:hover {
@@ -185,7 +183,7 @@ header h1 {
   border: none;
   border: 1px solid black;
 }
-#logInForm #LogInInput {
+#logInForm #logInInput {
   border: none;
 }
 #logInForm #logInInput:hover {
@@ -423,6 +421,7 @@ aside a {
 .userProfInfo {
   display: flex;
   margin-top: 6em;
+  margin-bottom: 7em;
 }
 .userProfInfo .userName {
   margin: 3em;

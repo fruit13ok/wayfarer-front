@@ -35,7 +35,7 @@ class LoginModal extends Component {
             <input type="text" name='username' placeholder="Username" onChange={this.props.handleInput}/>
             <input type="password" name='password' placeholder="Password" onChange={this.props.handleInput}/>
             <input type="text" name='currentCity' placeholder="Current City" onChange={this.props.handleInput}/>
-            <input id="signUpInput"type="submit"  value="Sign Up" onClick={this.props.handleSignUp}/>
+            <input id="signUpInput"type="submit"  value="Submit" onClick={this.props.handleSignUp}/>
         </form>
 
         <form id="logInForm">
@@ -43,7 +43,7 @@ class LoginModal extends Component {
             <input type="text" name='username' placeholder="Username" onChange={this.props.handleInput}/>
             {/* <input type="email" name='email' onChange={this.props.handleInput}/> */}
             <input type="password" name='password' placeholder="Password" onChange={this.props.handleInput}/>
-            <input id="logInInput" type="submit"  value="Log In" onClick={this.props.handleLogIn}/>
+            <input id="logInInput" type="submit"  value="Submit" onClick={this.props.handleLogIn}/>
         </form>
         </Modal>
     )
