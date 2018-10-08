@@ -16,7 +16,7 @@ class Header extends Component {
     }
 
     render() {
-        console.log(this.props.isLoggedIn)
+        // console.log(this.props.isLoggedIn)
         return (
             <header>
                 <Link to="/"><h1>Wayfarer</h1></Link>

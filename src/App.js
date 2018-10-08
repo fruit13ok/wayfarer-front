@@ -42,7 +42,7 @@ authfunc = () => {
     return (
       <div className="App">
         <Header authfunc={this.authfunc} isLoggedIn={this.state.isLoggedIn}/>
-        <Main token={this.state.token}/>
+        <Main isLoggedIn={this.state.isLoggedIn}/>
         <Footer />
       </div>
     );

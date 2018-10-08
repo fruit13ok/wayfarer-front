@@ -8,12 +8,13 @@ import LoginModalContainer from './LoginModalContainer'
 
 class  Main extends Component {
   render() {
-    // console.log(this.props.token)
+    // console.log('MAIN')
+    // console.log('state:', this.props.isLoggedIn)
     return (
       <div>
         <Switch>
           <Route path = "/cities" component={Cities} />
-          <Route path = "/profile/:name" component={Profiles} />
+          <Route path = "/profile/:name" render={(props) => <Profiles {...props} isLoggedIn={this.props.isLoggedIn}/>} />
           <Route path = "/" component={Landing} />
         </Switch>
         </div>
