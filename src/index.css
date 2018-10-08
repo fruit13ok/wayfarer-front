@@ -340,6 +340,11 @@ article {
   width: 40vw;
   margin: 2em;
 }
+.cityHeaderImage img {
+  width: 40vw;
+  height: 30vh;
+  object-fit: contain;
+}
 
 .cityHeaderText {
   margin-top: 3em;

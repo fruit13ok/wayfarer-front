@@ -9,6 +9,11 @@
     border: .1em solid black;
     width:40vw;
     margin:2em;
+    img {
+        width:40vw;
+        height:30vh;
+        object-fit:contain;
+    }
 }
 
 .cityHeaderText {

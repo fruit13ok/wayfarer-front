@@ -19,20 +19,38 @@ class Cities extends Component {
         {name: "Seattle", image: "http://localhost:3001/images/seattle.jpg"},
         {name: "Mexico City", image: "http://localhost:3001/images/mexicoCity.png"}
       ],
-      currSelectedCity: ''
+      // currSelectedCity: ''
+      currSelectedCityName: "",
+      currSelectedCityImage: ""
     };
   }
   setCurrSelectedCity = (data) => {
-    console.log(data);
+    if(data){
+      console.log("inside cities.js:",data);
+      this.setState({
+        currSelectedCityName: data.name,
+        currSelectedCityImage: data.image
+      })
+
+    } 
+    // console.log(data);
   }
   // setCurrSelectedCity = (event) => {
   //   console.log(event.target.name);
   // }
   render() {
+    console.log("inside cities.js:",this.state.currSelectedCityName);
+    console.log("inside cities.js:",this.state.currSelectedCityImage);
     return (
         <section id="cityPage">
-            <CitiesAside cities={this.state.cities} setCurrSelectedCity={this.setCurrSelectedCity} />
-            <CitiesArticle cities={this.state.cities} setCurrSelectedCity={this.setCurrSelectedCity}/>
+            <CitiesAside 
+            cities={this.state.cities} 
+            setCurrSelectedCity={this.setCurrSelectedCity} />
+            <CitiesArticle 
+            currSelectedCityName={this.state.currSelectedCityName} 
+            currSelectedCityImage={this.state.currSelectedCityImage}
+            cities={this.state.cities} 
+            setCurrSelectedCity={this.setCurrSelectedCity}/>
         </section>
     );
   }
