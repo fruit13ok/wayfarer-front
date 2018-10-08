@@ -10,6 +10,7 @@ class Header extends Component {
         isLoggedIn: false
         })
         localStorage.clear()
+        // window.location='/';
     }
 
     render() {

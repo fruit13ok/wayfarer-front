@@ -58,6 +58,8 @@ class LoginModalContainer extends Component {
           console.log('logged in:',this.state.isLoggedIn)
           if (this.state.isLoggedIn == true){
             console.log("REDIRECT");
+            //I know this isn't the correct way just bare with me for a moment
+            // window.location='/cities';
           }
         })
         .catch(err => console.log(err))
