@@ -87,6 +87,7 @@ class LoginModalContainer extends Component {
       })
       console.log('logged in:', this.props.isLoggedIn)
     })
+    .then(() => this.setState({ redirect: true }))
     .catch(err => console.log(err, 'hello')) 
   }    
 

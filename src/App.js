@@ -94,7 +94,7 @@ componentDidMount () {
 // }
 
   render() {
-    console.log('am i logged in? ' + this.state.isLoggedIn)
+    console.log('APP.js am i logged in? ' + this.state.isLoggedIn)
     return (
       <div className="App">
         <Header 
