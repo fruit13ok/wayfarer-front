@@ -1,14 +1,18 @@
 aside {
-    margin-top:2em;
+    margin-top:1em;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
     width:30vw;
+    border:1px solid#3d3d3d;
+    margin-right:1em;
     h1 {
+        padding-top:1em;
         margin:1em 0 0 2em;
         font-family:'Oranienbaum', serif;
         letter-spacing:2px;
         text-align:center;
         text-transform: uppercase;
+        color:rgba(255, 255, 255, 0.701);
     }
 }

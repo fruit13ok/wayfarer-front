@@ -92,7 +92,7 @@ class LoginModalContainer extends Component {
   render() {
     return (
       <div>
-        <button id="signIn" onClick={this.handleOpenModal}>Sign In</button>
+        <button id="signIn" onClick={this.handleOpenModal}>Sign Up</button>
         <button id="signIn"onClick={this.handleOpenModal}>Login</button>
         <LoginModal 
           modalIsOpen={this.state.modalIsOpen} 

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import Nav from './Nav'
+
+
 
 
 class Header extends Component {
@@ -17,7 +20,7 @@ class Header extends Component {
         console.log(this.props.isLoggedIn)
         return (
             <header>
-                <h1>Wayfarer</h1>
+                <Link to="/"><h1>Wayfarer</h1></Link>
                 <div id='navAndSearch'>
                     <Nav 
                         isLoggedIn={this.props.isLoggedIn} 

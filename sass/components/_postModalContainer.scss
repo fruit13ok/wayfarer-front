@@ -1,7 +1,9 @@
 #plus {
     border:none;
     font-size: 2.5em;
+    background-color:black;
+    color:rgba(255, 255, 255, 0.886);
     &:hover {
-        color:red;
+        color:#feda6a;
     }
 }
