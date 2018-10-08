@@ -6,7 +6,7 @@ class CitiesArticle extends Component {
   render() {
     return (
         <article>
-          <CityHeader />
+          <CityHeader cities={this.props.cities} setCurrSelectedCity={this.props.setCurrSelectedCity} />
           <CityMain />
         </article>
     );
