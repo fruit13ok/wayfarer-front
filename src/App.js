@@ -19,22 +19,30 @@ class App extends Component {
   }
 
 componentDidMount () {
-  if (localStorage.token) {
+  console.log('Did mount being called.');
+  
+  this.authfunc()
+}
+
+authfunc = () => {
+  if (localStorage.token ){
     this.setState({
-      isLoggedIn:true
+      isLoggedIn: true,
     })
-  } else {
+  }
+  else {
     this.setState({
       isLoggedIn:false
     })
   }
+  
 }
 
   render() {
     return (
       <div className="App">
-        <Header isLoggedIn={this.state.isLoggedIn}/>
-        <Main />
+        <Header authfunc={this.authfunc} isLoggedIn={this.state.isLoggedIn}/>
+        <Main token={this.state.token}/>
         <Footer />
       </div>
     );

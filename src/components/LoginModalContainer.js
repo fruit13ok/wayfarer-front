@@ -49,16 +49,15 @@ class LoginModalContainer extends Component {
         } )
         .then(response => {
           console.log('SUCCESS')
+          console.log(response)
           console.log('Rep.data.tok' + response.data.token)
           localStorage.token=response.data.token
           console.log('Local Storage' + localStorage.token)
-          this.setState({
-            isLoggedIn: true
-          })
-          console.log('logged in:',this.state.isLoggedIn)
-          if (this.state.isLoggedIn == true){
-            console.log("REDIRECT");
-          }
+          this.props.authfunc()
+          // console.log('logged in:',this.state.isLoggedIn)
+          // if (this.state.isLoggedIn == true){
+          //   console.log(localStorage.token);
+          // }
         })
         .catch(err => console.log(err))
   }
@@ -79,10 +78,8 @@ class LoginModalContainer extends Component {
       localStorage.token=response.data.token
       console.log('Local Storage' + localStorage.token)
       
-      this.setState({
-        isLoggedIn: true
-      })
-      console.log('logged in:', this.state.isLoggedIn)
+      this.props.authfunc()
+      // console.log('logged in:', this.state.isLoggedIn)
     })
     .catch(err => console.log(err, 'hello')) 
   }    

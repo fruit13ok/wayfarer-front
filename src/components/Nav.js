@@ -15,7 +15,7 @@ class Nav extends Component {
                             </form>)
         }
         else {
-            navBarItems.push( <LoginModalContainer/>)
+            navBarItems.push( <LoginModalContainer authfunc={this.props.authfunc} isLoggedIn={this.props.isLoggedIn}/>)
         }
         return (
             <nav id="header-nav">

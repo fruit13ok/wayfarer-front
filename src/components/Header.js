@@ -22,6 +22,7 @@ class Header extends Component {
                 <Link to="/"><h1>Wayfarer</h1></Link>
                 <div id='navAndSearch'>
                     <Nav 
+                        authfunc={this.props.authfunc}
                         isLoggedIn={this.props.isLoggedIn} 
                         handleLogOut={this.handleLogOut}/>
                 </div>

@@ -8,6 +8,7 @@ import LoginModalContainer from './LoginModalContainer'
 
 class  Main extends Component {
   render() {
+    // console.log(this.props.token)
     return (
       <div>
         <Switch>
