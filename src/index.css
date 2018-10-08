@@ -3,57 +3,69 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  padding: .6em 0; }
-  header h1 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 2.9em;
-    text-transform: uppercase;
-    margin-left: 1em;
-    letter-spacing: 4px;
-    color: #7b7b7b;
-    padding: 0;
-    margin-bottom: 0; }
-    header h1:hover {
-      color: #feda6a; }
+  padding: 0.6em 0;
+}
+header h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2.9em;
+  text-transform: uppercase;
+  margin-left: 1em;
+  letter-spacing: 4px;
+  color: #7b7b7b;
+  padding: 0;
+  margin-bottom: 0;
+}
+header h1:hover {
+  color: #feda6a;
+}
 
 #navAndSearch {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 2em; }
+  margin-right: 2em;
+}
 
 #header-nav {
-  margin: 0 2em; }
-  #header-nav ul {
-    display: flex; }
-    #header-nav ul a {
-      text-decoration: none;
-      margin: 0 1.5em;
-      color: #7b7b7b;
-      font-size: 1.3em;
-      text-transform: uppercase;
-      font-family: 'Open Sans Condensed', sans-serif;
-      letter-spacing: 2px; }
-      #header-nav ul a:hover {
-        color: #feda6a; }
+  margin: 0 2em;
+}
+#header-nav ul {
+  display: flex;
+}
+#header-nav ul a {
+  text-decoration: none;
+  margin: 0 1.5em;
+  color: #7b7b7b;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 2px;
+}
+#header-nav ul a:hover {
+  color: #feda6a;
+}
 
 #myForm button {
   border: none;
   outline: none;
-  background-color: black; }
+  background-color: black;
+}
 #myForm input {
   margin-left: 1.5em;
-  padding: .2em .3em;
+  padding: 0.2em 0.3em;
   border: none;
   background-color: black;
   border-bottom: 1px solid white;
   outline: none;
-  color: white; }
+  color: white;
+}
 #myForm .fa-search {
   background-color: black;
-  color: white; }
-  #myForm .fa-search:hover {
-    color: #feda6a; }
+  color: white;
+}
+#myForm .fa-search:hover {
+  color: #feda6a;
+}
 
 #footer-nav {
   background-color: black;
@@ -61,10 +73,12 @@ header {
   justify-content: flex-end;
   padding-right: 1em;
   align-items: flex-end;
-  padding-bottom: .5em;
-  color: #3d3d3d; }
-  #footer-nav i:hover {
-    color: #feda6a; }
+  padding-bottom: 0.5em;
+  color: #3d3d3d;
+}
+#footer-nav i:hover {
+  color: #feda6a;
+}
 
 .Modal {
   position: absolute;
@@ -77,72 +91,86 @@ header {
   display: flex;
   flex-direction: column;
   outline: none;
-  box-shadow: 3px 3px 5px black; }
+  box-shadow: 3px 3px 5px black;
+}
 
 .Overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+}
 
 #signIn {
   border: none;
   font-size: 1.3em;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 2px;
   outline: none;
   background-color: black;
-  color: #7b7b7b; }
+  color: #7b7b7b;
+}
 
 #signIn:hover {
-  color: #feda6a; }
+  color: #feda6a;
+}
 
 #signUpForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 1em 0; }
-  #signUpForm input {
-    width: 20vw;
-    margin: .3em 0;
-    padding: .2em .3em;
-    border: none;
-    border: 1px solid black; }
-  #signUpForm #signUpInput {
-    border: none;
-    outline: none; }
-  #signUpForm #signUpInput:hover {
-    color: #feda6a; }
+  margin: 1em 0;
+}
+#signUpForm input {
+  width: 20vw;
+  margin: 0.3em 0;
+  padding: 0.2em 0.3em;
+  border: none;
+  border: 1px solid black;
+}
+#signUpForm #signUpInput {
+  border: none;
+  outline: none;
+}
+#signUpForm #signUpInput:hover {
+  color: #feda6a;
+}
 
 #logInForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 1em 0; }
-  #logInForm input {
-    width: 20vw;
-    margin: .3em 0;
-    padding: .2em .3em;
-    border: none;
-    border: 1px solid black; }
-  #logInForm #logInInput {
-    border: none;
-    outline: none; }
-  #logInForm #logInInput:hover {
-    color: red; }
+  margin: 1em 0;
+}
+#logInForm input {
+  width: 20vw;
+  margin: 0.3em 0;
+  padding: 0.2em 0.3em;
+  border: none;
+  border: 1px solid black;
+}
+#logInForm #logInInput {
+  border: none;
+  outline: none;
+}
+#logInForm #logInInput:hover {
+  color: red;
+}
 
 #closeModal {
   width: 2em;
   border: none;
   font-size: 1.5em;
-  outline: none; }
+  outline: none;
+}
 
 #closeModal:hover {
-  color: red; }
+  color: red;
+}
 
 #landingPage {
   width: 100vw;
@@ -150,82 +178,102 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: black; }
-  #landingPage h1 {
-    margin-top: 2em;
-    text-transform: uppercase;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 3.5em;
-    letter-spacing: 4px;
-    color: #565656; }
-  #landingPage #carousel-container {
-    width: 100vw;
-    height: 90vh; }
-    #landingPage #carousel-container img {
-      width: 100vw;
-      height: 90vh;
-      object-fit: cover;
-      opacity: .6; }
-  #landingPage #section-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 2em;
-    margin-bottom: 6em; }
-    #landingPage #section-container div {
-      display: flex;
-      flex-direction: column;
-      margin: 0 3em;
-      justify-content: flex-end;
-      align-items: center; }
-    #landingPage #section-container h2 {
-      text-transform: uppercase;
-      font-family: 'Open Sans Condensed', sans-serif;
-      font-size: 2em;
-      letter-spacing: 4px;
-      color: #3d3d3d; }
-    #landingPage #section-container p {
-      font-family: 'Oranienbaum', serif;
-      font-size: 1.5em;
-      color: #3d3d3d; }
+  background-color: black;
+}
+#landingPage h1 {
+  margin-top: 2em;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 3.5em;
+  letter-spacing: 4px;
+  color: #565656;
+}
+#landingPage #carousel-container {
+  width: 100vw;
+  height: 90vh;
+}
+#landingPage #carousel-container img {
+  width: 100vw;
+  height: 90vh;
+  object-fit: cover;
+  opacity: 0.6;
+}
+#landingPage #section-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 2em;
+  margin-bottom: 6em;
+}
+#landingPage #section-container div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3em;
+  justify-content: flex-end;
+  align-items: center;
+}
+#landingPage #section-container h2 {
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2em;
+  letter-spacing: 4px;
+  color: #3d3d3d;
+}
+#landingPage #section-container p {
+  font-family: "Oranienbaum", serif;
+  font-size: 1.5em;
+  color: #3d3d3d;
+}
 
 .userProfInfo {
   display: flex;
-  margin-top: 6em;
-  margin-bottom: 7em; }
-  .userProfInfo .userName {
-    margin: 3em;
-    width: 25vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .userProfInfo .userName h2 {
-      font-family: 'Oranienbaum', serif;
-      margin: .25em 0;
-      letter-spacing: 2px;
-      text-align: center; }
-  .userProfInfo .profilePic {
-    background-repeat: no-repeat;
-    background-position: 50%;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 3em; }
+  padding-top: 6em;
+  padding-bottom: 7em;
+  background-color: black;
+}
+.userProfInfo .userName {
+  margin: 3em;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userProfInfo .userName h2 {
+  font-family: "Oranienbaum", serif;
+  margin: 0.25em 0;
+  letter-spacing: 2px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.701);
+}
+.userProfInfo .profilePic {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 3em;
+  opacity: 0.7;
+}
 
 .userPosts {
-  width: 50vw; }
-  .userPosts h3 {
-    text-transform: uppercase;
-    font-family: 'Oranienbaum', serif;
-    font-size: 2em;
-    letter-spacing: 4px; }
+  width: 50vw;
+}
+.userPosts h3 {
+  text-transform: uppercase;
+  font-family: "Oranienbaum", serif;
+  font-size: 2em;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.701);
+}
 
 #cityPage {
   display: flex;
   width: 100vw;
-  margin: 2em; }
+  padding: 2em;
+  background-color: black;
+}
 
 aside li {
   list-style: none;
@@ -235,47 +283,63 @@ aside li {
   border-radius: 20px;
   display: flex;
   justify-content: flex-start;
-  align-items: center; }
-  aside li img {
-    width: 5vw;
-    height: 5vh;
-    border: .1em solid black; }
+  align-items: center;
+}
+aside li img {
+  width: 5vw;
+  height: 5vh;
+  border: 0.1em solid black;
+}
 aside a {
   text-decoration: none;
-  color: black;
+  color: rgba(255, 255, 255, 0.701);
   font-size: 1.3em;
   padding-left: 1em;
   text-transform: uppercase;
-  font-family: 'Oranienbaum', serif;
-  letter-spacing: 2px; }
+  font-family: "Oranienbaum", serif;
+  letter-spacing: 2px;
+}
+aside a:hover {
+  color: #feda6a;
+}
 
 aside {
-  margin-top: 2em;
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 30vw; }
-  aside h1 {
-    margin: 1em 0 0 2em;
-    font-family: 'Oranienbaum', serif;
-    letter-spacing: 2px;
-    text-align: center;
-    text-transform: uppercase; }
+  width: 30vw;
+  border: 1px solid #3d3d3d;
+  margin-right: 1em;
+}
+aside h1 {
+  padding-top: 1em;
+  margin: 1em 0 0 2em;
+  font-family: "Oranienbaum", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.701);
+}
 
 article {
-  margin-top: 2em;
-  width: 60vw; }
+  margin-top: 1em;
+  margin-left: 3em;
+  width: 50vw;
+}
 
 .cityHeaderWrapper {
   display: flex;
   justify-content: space-around;
   height: 40vh;
-  margin-bottom: 3em; }
+  margin-bottom: 3em;
+}
 
 .cityHeaderImage {
-  border: .1em solid black;
+  border: 0.1em solid black;
   width: 40vw;
-  margin: 2em; }
+  margin: 2em;
+}
 
 .cityHeaderText {
   margin-top: 3em;
@@ -284,89 +348,116 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start; }
-  .cityHeaderText h1 {
-    font-family: 'Oranienbaum', serif;
-    letter-spacing: 2px;
-    text-align: center;
-    margin: 0; }
-  .cityHeaderText h3 {
-    font-family: 'Oranienbaum', serif;
-    letter-spacing: 2px;
-    text-align: center;
-    margin: .5em 0 0 0; }
+  align-items: flex-start;
+}
+.cityHeaderText h1 {
+  font-family: "Oranienbaum", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.886);
+}
+.cityHeaderText h3 {
+  font-family: "Oranienbaum", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0.5em 0 0 0;
+  color: rgba(255, 255, 255, 0.886);
+}
 
 .cityPostsHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 2em; }
-  .cityPostsHeader a {
-    color: black;
-    text-decoration: none;
-    font-size: 3em; }
-  .cityPostsHeader h1 {
-    font-family: 'Oranienbaum', serif;
-    letter-spacing: 2px;
-    text-align: center; }
+  margin: 0 2em;
+}
+.cityPostsHeader a {
+  color: rgba(255, 255, 255, 0.886);
+  text-decoration: none;
+  font-size: 3em;
+}
+.cityPostsHeader h1 {
+  font-family: "Oranienbaum", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.886);
+}
 
 .postContainer {
   display: flex;
   margin: 2em;
-  padding: 1em; }
+  padding: 1em;
+}
 
 .postContent {
   display: flex;
   flex-direction: column;
-  width: 50vw; }
-  .postContent h2 {
-    text-transform: uppercase;
-    font-family: 'Oranienbaum', serif;
-    font-size: 1.5em;
-    letter-spacing: 4px; }
-  .postContent p {
-    font-family: 'Oranienbaum', serif;
-    font-size: 1.2em; }
+  width: 50vw;
+}
+.postContent h2 {
+  text-transform: uppercase;
+  font-family: "Oranienbaum", serif;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.701);
+}
+.postContent p {
+  font-family: "Oranienbaum", serif;
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.701);
+}
 
 .postImage {
   width: 20vw;
-  border: .1em solid black;
-  margin: 0 2em; }
+  border: 0.1em solid black;
+  margin: 0 2em;
+}
 
 #addPost {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4.5em 0; }
-  #addPost input {
-    width: 20vw;
-    margin: .3em 0;
-    padding: .2em .3em;
-    border: none;
-    border: 1px solid black; }
-  #addPost textarea {
-    width: 20vw;
-    margin: .3em 0;
-    padding: .2em .3em;
-    border: none;
-    border: 1px solid black; }
-  #addPost #addPostInput {
-    border: none; }
-  #addPost #addPostInput:hover {
-    color: red; }
+  margin: 4.5em 0;
+}
+#addPost input {
+  width: 20vw;
+  margin: 0.3em 0;
+  padding: 0.2em 0.3em;
+  border: none;
+  border: 1px solid black;
+}
+#addPost textarea {
+  width: 20vw;
+  margin: 0.3em 0;
+  padding: 0.2em 0.3em;
+  border: none;
+  border: 1px solid black;
+}
+#addPost #addPostInput {
+  border: none;
+}
+#addPost #addPostInput:hover {
+  color: red;
+}
 
 #closeModal {
   width: 2em;
   border: none;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 #closeModal:hover {
-  color: red; }
+  color: red;
+}
 
 #plus {
   border: none;
-  font-size: 2.5em; }
-  #plus:hover {
-    color: red; }
+  font-size: 2.5em;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.886);
+}
+#plus:hover {
+  color: #feda6a;
+}
 
 /*# sourceMappingURL=index.css.map */

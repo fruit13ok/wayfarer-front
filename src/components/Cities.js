@@ -32,7 +32,7 @@ class Cities extends Component {
     return (
         <section id="cityPage">
             <CitiesAside cities={this.state.cities} setCurrSelectedCity={this.setCurrSelectedCity} />
-            <CitiesArticle />
+            <CitiesArticle cities={this.state.cities} setCurrSelectedCity={this.setCurrSelectedCity}/>
         </section>
     );
   }
