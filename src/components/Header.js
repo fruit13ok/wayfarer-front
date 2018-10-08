@@ -13,7 +13,7 @@ class Header extends Component {
         isLoggedIn: false
         })
         localStorage.clear()
-        // window.location='/';
+        window.location='/';
     }
 
     render() {
@@ -24,7 +24,8 @@ class Header extends Component {
                 <div id='navAndSearch'>
                     <Nav 
                         isLoggedIn={this.props.isLoggedIn} 
-                        handleLogOut={this.handleLogOut}/>
+                        handleLogOut={this.handleLogOut}
+                        redirect={this.props.redirect}/>
                 </div>
             </header>
         );

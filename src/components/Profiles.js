@@ -17,6 +17,7 @@ class Profiles extends Component {
             .then(response=>{
                 this.setState({user: response.data})
             })
+            .then(() => this.setState({ redirect: true }))
             .catch(err =>{
                 console.log("Profile did not mount" + err);
             })
@@ -27,8 +28,8 @@ class Profiles extends Component {
             <div className ="userProfInfo">
                 <div className="userName">
                     <img className="profilePic"  alt ="" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg" />
-                    <h2>{this.props.match.params.name}</h2>
-                    <h2>{this.state.user.currentCity}</h2>
+                    <h2>Username: {this.props.match.params.name}</h2>
+                    <h2>Date joined:{this.state.user.currentCity}</h2>
                     <h2>Member Since: {this.state.user.dateJoined} </h2>
                 </div>
                 <UserPostsList/>

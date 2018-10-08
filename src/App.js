@@ -14,14 +14,15 @@ class App extends Component {
     super()
 
     this.state = {
-      isLoggedIn:false
+      isLoggedIn:false,
+      redirect: false
     }
   }
 
 componentDidMount () {
   if (localStorage.token) {
     this.setState({
-      isLoggedIn:true
+      isLoggedIn:true,
     })
   } else {
     this.setState({
@@ -30,10 +31,75 @@ componentDidMount () {
   }
 }
 
+// handleSignUp = (event) => {
+//   console.log('username: ',this.state.username);
+//   console.log('password: ',this.state.password);
+//   console.log('currentCity: ',this.state.currentCity);
+//   event.preventDefault();
+//     axios.post('http://localhost:3001/users/signup',
+//       {
+//         username: this.state.username,
+//         password: this.state.password,
+//         currentCity: this.state.currentCity
+//       } )
+//       .then(response => {
+//         console.log('SUCCESS')
+//         console.log('Rep.data.tok' + response.data.token)
+//         localStorage.token=response.data.token
+//         console.log('Local Storage' + localStorage.token)
+//         this.setState({
+//           isLoggedIn: true
+//         })
+//         console.log('logged in:',this.state.isLoggedIn)
+//         // if (this.state.isLoggedIn == true){
+//         //   console.log("REDIRECT");
+//         // }
+//       })
+//       .then(() => this.setState({ redirect: true }))
+//       .catch(err => console.log(err))
+// }
+
+// handleLogIn = (event) => {
+//   event.preventDefault();
+//   console.log('username: ',this.state.username);
+//   console.log('password: ',this.state.password);
+//   axios.post('http://localhost:3001/users/login', 
+//   {
+//     username: this.state.username,
+//     password: this.state.password
+//   })
+//   .then(response => {
+//     // console.log(response.data.token)
+
+//     console.log('Rep.data.tok' + response.data.token)
+//     localStorage.token=response.data.token
+//     console.log('Local Storage' + localStorage.token)
+    
+//     this.setState({
+//       isLoggedIn: true
+//     })
+//     console.log('logged in:', this.state.isLoggedIn)
+//   })
+//   .catch(err => console.log(err, 'hello')) 
+// }    
+
+// handleLogOut = () => {
+//   this.setState({
+//   email: '',
+//   password: '',
+//   isLoggedIn: false
+//   })
+//   localStorage.clear()
+//   window.location='/';
+// }
+
   render() {
+    console.log('am i logged in? ' + this.state.isLoggedIn)
     return (
       <div className="App">
-        <Header isLoggedIn={this.state.isLoggedIn}/>
+        <Header 
+        isLoggedIn={this.state.isLoggedIn}
+        redirect={this.state.redirect}/>
         <Main />
         <Footer />
       </div>

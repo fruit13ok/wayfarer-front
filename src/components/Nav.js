@@ -7,7 +7,8 @@ class Nav extends Component {
         let navBarItems = []
         if(this.props.isLoggedIn) {
             navBarItems.push(<li ><Link to="/cities"> Cities </Link></li>)
-            navBarItems.push(<li><Link to="/profile/:name"> Profile </Link></li>)
+            //TODO: /profile/:name back in
+            navBarItems.push(<li><Link to="/profile"> Profile </Link></li>)
             navBarItems.push(<li><a href="erase jwt token, redir to landing" onClick={this.props.handleLogOut}> Log Out </a></li>)
             navBarItems.push(<form id='myForm'>
                                 <input type="search" placeholder="Search ..."/>
@@ -15,7 +16,10 @@ class Nav extends Component {
                             </form>)
         }
         else {
-            navBarItems.push( <LoginModalContainer/>)
+            navBarItems.push( 
+            <LoginModalContainer
+            redirect={this.props.redirect}
+            />)
         }
         return (
             <nav id="header-nav">

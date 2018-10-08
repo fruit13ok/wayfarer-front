@@ -12,7 +12,9 @@ class  Main extends Component {
       <div>
         <Switch>
           <Route path = "/cities" component={Cities} />
-          <Route path = "/profile/:name" component={Profiles} />
+          <Route path = "/profile" component={Profiles} 
+          //here will be user info passed down
+          redirect={this.props.redirect}/>
           <Route path = "/" component={Landing} />
         </Switch>
         </div>

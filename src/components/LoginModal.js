@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 // import './.css';
+import {Route, Redirect} from 'react-router-dom'
+import Profiles from './Profiles'
 
 // npm install react-modal
 // https://www.npmjs.com/package/react-modal#examples

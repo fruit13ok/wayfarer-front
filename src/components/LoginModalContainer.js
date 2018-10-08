@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import {Switch, Route, Redirect} from 'react-router-dom'
 import axios from 'axios';
 // import '.s/index.css';
 import LoginModal from './LoginModal';
+import Profiles from './Profiles'
 
 class LoginModalContainer extends Component {
   constructor () {
@@ -15,7 +17,6 @@ class LoginModalContainer extends Component {
       username:'',
       password: '',
       currentCity: '',
-      // isLoggedIn: false
     }
   }
   // this LoginModalCOntainer.js has a button to launch modal by set modalIsOpen state to true, LoginModal.js will listen to it
@@ -56,14 +57,14 @@ class LoginModalContainer extends Component {
             isLoggedIn: true
           })
           console.log('logged in:',this.state.isLoggedIn)
-          if (this.state.isLoggedIn == true){
-            console.log("REDIRECT");
-            //I know this isn't the correct way just bare with me for a moment
-            // window.location='/cities';
-          }
+          // if (this.state.isLoggedIn == true){
+          //   console.log("REDIRECT");
+          // }
         })
+        .then(() => this.setState({ redirect: true }))
         .catch(err => console.log(err))
   }
+
 
   handleLogIn = (event) => {
     event.preventDefault();
@@ -84,12 +85,16 @@ class LoginModalContainer extends Component {
       this.setState({
         isLoggedIn: true
       })
-      console.log('logged in:', this.state.isLoggedIn)
+      console.log('logged in:', this.props.isLoggedIn)
     })
     .catch(err => console.log(err, 'hello')) 
   }    
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to='/profile/bret'/>
+    }
+    else{ 
     return (
       <div>
         <button id="signIn" onClick={this.handleOpenModal}>Sign Up</button>
@@ -100,9 +105,11 @@ class LoginModalContainer extends Component {
           handleInput={this.handleInput}
           handleSignUp={this.handleSignUp}
           handleLogIn={this.handleLogIn}
+          isLoggedIn={this.props.isLoggedIn}
         />
       </div>
     );
+    }
   }
 }
 
