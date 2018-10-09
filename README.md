@@ -109,9 +109,6 @@ authfunc = () => {
 LoginModalContainer.js componenet....
 ```
   handleSignUp = (event) => {
-    console.log('username: ',this.state.username);
-    console.log('password: ',this.state.password);
-    console.log('currentCity: ',this.state.currentCity);
     event.preventDefault();
       axios.post('http://localhost:3001/users/signup',
         {
