@@ -15,7 +15,10 @@ class  Post extends Component {
         </div>
         <div className="postContent">
             <h2>Title of Post</h2>
-            <p>Incididunt labore exercitation reprehenderit pariatur sit adipisicing excepteur eu dolore sit. Deserunt deserunt officia excepteur esse sunt anim tempor. Anim adipisicing incididunt pariatur dolor velit officia aliqua esse officia.</p>
+            <p>Incididunt labore exercitation reprehenderit pariatur sit 
+              adipisicing excepteur eu dolore sit. Deserunt deserunt officia 
+              excepteur esse sunt anim tempor. Anim adipisicing incididunt 
+              pariatur dolor velit officia aliqua esse officia.</p>
         </div>
     </div>
     );

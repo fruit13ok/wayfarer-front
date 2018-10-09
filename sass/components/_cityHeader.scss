@@ -4,11 +4,18 @@
     height:40vh;
     margin-bottom:3em;
 }
+
 .cityHeaderImage {
     border: .1em solid black;
     width:40vw;
     margin:2em;
+    img {
+        width:40vw;
+        height:30vh;
+        object-fit:contain;
+    }
 }
+
 .cityHeaderText {
     margin-top:3em;
     margin-left:2em;
@@ -22,11 +29,13 @@
         letter-spacing:2px;
         text-align:center;
         margin:0;
+        color:rgba(255, 255, 255, 0.886);    
     }
     h3 {
         font-family:'Oranienbaum', serif;
         letter-spacing:2px;
         text-align:center;
         margin: .5em 0 0 0;
+        color:rgba(255, 255, 255, 0.886);
     }
 }

@@ -48,14 +48,16 @@ class LoginModalContainer extends Component {
           currentCity: this.state.currentCity
         } )
         .then(response => {
-          // console.log('SUCCESS')
-           console.log('Rep.data.tok' + response.data.token)
+          console.log('SUCCESS')
+          console.log(response)
+          console.log('Rep.data.tok' + response.data.token)
           localStorage.token=response.data.token
           console.log('Local Storage' + localStorage.token)
-          this.setState({
-            isLoggedIn: true
-          })
-          console.log('logged in:',this.state.isLoggedIn)
+          this.props.authfunc()
+          // console.log('logged in:',this.state.isLoggedIn)
+          // if (this.state.isLoggedIn == true){
+          //   console.log(localStorage.token);
+          // }
         })
         .catch(err => console.log(err))
   }
@@ -76,37 +78,23 @@ class LoginModalContainer extends Component {
       localStorage.token=response.data.token
       console.log('Local Storage' + localStorage.token)
       
-      this.setState({
-        isLoggedIn: true
-      })
-      console.log('logged in:', this.state.isLoggedIn)
+      this.props.authfunc()
+      // console.log('logged in:', this.state.isLoggedIn)
     })
     .catch(err => console.log(err, 'hello')) 
   }    
 
   render() {
     return (
-      <div className="">
-        {/* <p>inside LoginModalCONTAINER.js</p>
-        <p>{this.state.input1}</p>
-        <p>{this.state.input2}</p>
-        <p>{this.state.input3}</p> */}
-        <button id="signIn"
-          onClick={this.handleOpenModal}
-        >
-          Sign In
-        </button>
-        <button id="signIn"
-          onClick={this.handleOpenModal}
-        >
-          Login
-        </button>
+      <div>
+        <button id="signIn" onClick={this.handleOpenModal}>Sign Up</button>
+        <button id="signIn"onClick={this.handleOpenModal}>Login</button>
         <LoginModal 
-        modalIsOpen={this.state.modalIsOpen} 
-        handleCloseModal={this.handleCloseModal}
-        handleInput={this.handleInput}
-        handleSignUp={this.handleSignUp}
-        handleLogIn={this.handleLogIn}
+          modalIsOpen={this.state.modalIsOpen} 
+          handleCloseModal={this.handleCloseModal}
+          handleInput={this.handleInput}
+          handleSignUp={this.handleSignUp}
+          handleLogIn={this.handleLogIn}
         />
       </div>
     );

@@ -8,6 +8,8 @@
     border: 1px solid black;
     display:flex;
     flex-direction: column;
+    outline:none;
+    box-shadow: 3px 3px 5px black;
 }
 
 .Overlay {
@@ -24,9 +26,13 @@
     text-transform: uppercase;
     font-family: 'Open Sans Condensed', sans-serif;
     letter-spacing:2px;
+    outline:none;
+    background-color:black;
+    color:#7b7b7b;
 }
+
 #signIn:hover{
-    color:red;
+    color:#feda6a;
 }
 
 #signUpForm {
@@ -44,12 +50,12 @@
     }
     #signUpInput {
         border:none;
+        outline:none;
     }
     #signUpInput:hover {
-        color:red;;
+        color:#feda6a;;
     }
 }
-
 
 #logInForm {
     display:flex;
@@ -66,6 +72,7 @@
     }
     #logInInput {
         border:none;
+        outline:none;
     }
     #logInInput:hover {
         color:red;;
@@ -76,7 +83,9 @@
     width:2em;
     border:none;
     font-size: 1.5em;
+    outline:none;
 }
+
 #closeModal:hover {
     color:red;
 }

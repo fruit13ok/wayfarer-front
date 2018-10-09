@@ -16,11 +16,14 @@ aside {
     }
     a {
         text-decoration: none;
-        color:black;
+        color:rgba(255, 255, 255, 0.701);
         font-size: 1.3em;
         padding-left:1em;
         text-transform: uppercase;
         font-family:'Oranienbaum', serif;
         letter-spacing:2px;
+        &:hover {
+            color:#feda6a;
+        }
     }
 }
