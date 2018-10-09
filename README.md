@@ -154,4 +154,64 @@ class Nav extends Component {
     }
 }
 ```
+#### Accessing which user is logged in based on local storage token, verification of token, and accessing payload information:
 
+In Profiles.js component...
+```
+class Profiles extends Component {
+    constructor(){
+        super()
+        this.state = {
+        user: {},
+        }
+    }
+
+    componentDidMount = () =>{
+    
+        var config = {
+            headers: {'Authorization': "bearer " + localStorage.token}
+        };
+    
+        var bodyParameters = {
+            key: config.jwtSecret
+        }
+    
+        axios.post( 
+            'http://localhost:3001/users/verify',
+            bodyParameters,
+            config
+        ).then((response) => {
+            const userId = response.data.id
+            const user = response.data.username
+
+        }).catch((error) => {
+            console.log("AXIOS ERROR:",error)
+        });
+```
+
+In UserControllers.js (backend)...
+```
+router.post ('/verify',verifyToken, (req,res) => {
+  let verified= jwt1.verify(req.token, config.jwtSecret)
+  console.log("verified: ", verified)
+  res.json(verified)
+})
+
+function verifyToken(req, res, next) {
+
+  const bearerHeader = req.headers['authorization'];
+
+  if(typeof bearerHeader !== 'undefined'){
+    const bearer = bearerHeader.split(' ');
+
+    const bearerToken = bearer[1];
+    
+    req.token = bearerToken;
+    
+    next();
+
+  } else {
+    res.sendStatus(403);
+  }
+}
+```
