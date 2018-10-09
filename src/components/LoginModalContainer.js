@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 // import '.s/index.css';
 import LoginModal from './LoginModal';
 
@@ -7,12 +8,17 @@ class LoginModalContainer extends Component {
     super()
     this.state = {
       modalIsOpen: false,
-      input1: 'initial input1 string',
-      input2: 'initial input2 string',
-      input3: 'initial input3 string',
+      // input1: 'initial input1 string',
+      // input2: 'initial input2 string',
+      // input3: 'initial input3 string',
+
+      username:'',
+      password: '',
+      currentCity: '',
+      // isLoggedIn: false
     }
   }
-  // App.js has a button to launch modal by set modalIsOpen state to true, LoginModal.js will listen to it
+  // this LoginModalCOntainer.js has a button to launch modal by set modalIsOpen state to true, LoginModal.js will listen to it
   handleOpenModal = () => {
     this.setState({ modalIsOpen: true });
   }
@@ -22,37 +28,86 @@ class LoginModalContainer extends Component {
   }
   // callback change states by multiple form inputs, 
   // target.name and [name] is build-in to match state name and form name attribute
-  handleChange = (event) => {
-    let name = event.target.name;
-    let value  = event.target.value;
+  handleInput = (event) => {
+    // let name = event.target.name;
+    // let value  = event.target.value;
     this.setState({
-      [name]: value
+      [event.target.name]: event.target.value
     });
   }
   // not doing much now, should use to launch something or pass state some where else
-  handleSubmit = (event) => {
-    console.log('input1: ',this.state.input1);
-    console.log('input2: ',this.state.input2);
-    console.log('input3: ',this.state.input3);
+  handleSignUp = (event) => {
+    console.log('username: ',this.state.username);
+    console.log('password: ',this.state.password);
+    console.log('currentCity: ',this.state.currentCity);
     event.preventDefault();
+      axios.post('http://localhost:3001/users/signup',
+        {
+          username: this.state.username,
+          password: this.state.password,
+          currentCity: this.state.currentCity
+        } )
+        .then(response => {
+          // console.log('SUCCESS')
+           console.log('Rep.data.tok' + response.data.token)
+          localStorage.token=response.data.token
+          console.log('Local Storage' + localStorage.token)
+          this.setState({
+            isLoggedIn: true
+          })
+          console.log('logged in:',this.state.isLoggedIn)
+        })
+        .catch(err => console.log(err))
   }
+
+  handleLogIn = (event) => {
+    event.preventDefault();
+    console.log('username: ',this.state.username);
+    console.log('password: ',this.state.password);
+    axios.post('http://localhost:3001/users/login', 
+    {
+      username: this.state.username,
+      password: this.state.password
+    })
+    .then(response => {
+      // console.log(response.data.token)
+
+      console.log('Rep.data.tok' + response.data.token)
+      localStorage.token=response.data.token
+      console.log('Local Storage' + localStorage.token)
+      
+      this.setState({
+        isLoggedIn: true
+      })
+      console.log('logged in:', this.state.isLoggedIn)
+    })
+    .catch(err => console.log(err, 'hello')) 
+  }    
+
   render() {
     return (
       <div className="">
-        <p>inside LoginModalCONTAINER.js</p>
+        {/* <p>inside LoginModalCONTAINER.js</p>
         <p>{this.state.input1}</p>
         <p>{this.state.input2}</p>
-        <p>{this.state.input3}</p>
-        <button
+        <p>{this.state.input3}</p> */}
+        <button id="signIn"
           onClick={this.handleOpenModal}
         >
-          open modal
+          Sign In
+        </button>
+        <button id="signIn"
+          onClick={this.handleOpenModal}
+        >
+          Login
         </button>
         <LoginModal 
         modalIsOpen={this.state.modalIsOpen} 
         handleCloseModal={this.handleCloseModal}
-        handleChange={this.handleChange}
-        handleSubmit={this.handleSubmit} />
+        handleInput={this.handleInput}
+        handleSignUp={this.handleSignUp}
+        handleLogIn={this.handleLogIn}
+        />
       </div>
     );
   }

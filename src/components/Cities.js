@@ -1,69 +1,38 @@
 import React, { Component } from 'react';
+import CitiesAside from './CitiesAside'
+import CitiesArticle from './CitiesArticle'
+
 
 class Cities extends Component {
+  constructor() {
+    super();
+    this.state = {
+      cities: [
+        {name: "San Francisco", image: "http://localhost:3001/images/sanFrancisco.jpg"},
+        {name: "Bangkok", image: "http://localhost:3001/images/bangkok.jpg"},
+        {name: "London", image: "http://localhost:3001/images/london.jpg"},
+        {name: "Paris", image: "http://localhost:3001/images/paris.jpg"},
+        {name: "Dubai", image: "http://localhost:3001/images/dubai.jpg"},
+        {name: "New York", image: "http://localhost:3001/images/newYorkCity.jpg"},
+        {name: "Tokyo", image: "http://localhost:3001/images/tokyo.jpg"},
+        {name: "Sydney", image: "http://localhost:3001/images/sydney.jpg"},
+        {name: "Seattle", image: "http://localhost:3001/images/seattle.jpg"},
+        {name: "Mexico City", image: "http://localhost:3001/images/mexicoCity.png"}
+      ],
+      currSelectedCity: ''
+    };
+  }
+  setCurrSelectedCity = (data) => {
+    console.log(data);
+  }
+  // setCurrSelectedCity = (event) => {
+  //   console.log(event.target.name);
+  // }
   render() {
     return (
         <section id="cityPage">
-            <aside>
-                    <h1>Cities</h1>
-                    <ul>
-                        <li><img src="#" /><a href="#">San Francisco</a></li>
-                        <li><img src="#" /><a href="#">Bangkok</a></li>
-                        <li><img src="#" /><a href="#">London</a></li>
-                        <li><img src="#" /><a href="#">Paris</a></li>
-                        <li><img src="#" /><a href="#">Dubai</a></li>
-                        <li><img src="#" /><a href="#">Singapore</a></li>
-                        <li><img src="#" /><a href="#">New York City</a></li>
-                        <li><img src="#" /><a href="#">Tokyo</a></li>
-                        <li><img src="#" /><a href="#">Sydney</a></li>
-                        <li><img src="#" /><a href="#">Seattle</a></li>
-                        <li><img src="#" /><a href="#">Mexico City</a></li>
-                    </ul>
-            </aside>
-            <article>
-                <div className="cityHeaderWrapper">
-                    <div className="cityHeaderText">
-                        <h1>San Francisco</h1>
-                        <h3>California, USA</h3>
-                    </div>
-                    <div className="cityHeaderImage">
-                        <img src="#" />
-                    </div>
-                </div>
-                <div className="cityPostsWrapper">
-                    <div className="cityPostsHeader">
-                        <h1>Posts</h1>
-                        <a href="#">+</a>
-                    </div>
-                    <div className="postContainer">
-                        <div className="postImage">
-                            <img src="#" /> 
-                        </div>
-                        <div className="postContent">
-                            <h2>Title of Post</h2>
-                            <p>Incididunt labore exercitation reprehenderit pariatur sit adipisicing excepteur eu dolore sit. Deserunt deserunt officia excepteur esse sunt anim tempor. Anim adipisicing incididunt pariatur dolor velit officia aliqua esse officia.</p>
-                        </div>
-                    </div>
-                    <div className="postContainer">
-                            <div className="postImage">
-                                <img src="#" /> 
-                            </div>
-                            <div className="postContent">
-                                <h2>Title of Post</h2>
-                                <p>Incididunt labore exercitation reprehenderit pariatur sit adipisicing excepteur eu dolore sit. Deserunt deserunt officia excepteur esse sunt anim tempor. Anim adipisicing incididunt pariatur dolor velit officia aliqua esse officia.</p>
-                            </div>
-                    </div>
-                    <div className="postContainer">
-                            <div className="postImage">
-                                <img src="#" /> 
-                            </div>
-                            <div className="postContent">
-                                <h2>Title of Post</h2>
-                                <p>Incididunt labore exercitation reprehenderit pariatur sit adipisicing excepteur eu dolore sit. Deserunt deserunt officia excepteur esse sunt anim tempor. Anim adipisicing incididunt pariatur dolor velit officia aliqua esse officia.</p>
-                            </div>
-                    </div>
-                </div>
-            </article>
+            <CitiesAside cities={this.state.cities} setCurrSelectedCity={this.setCurrSelectedCity} />
+            <CitiesArticle />
         </section>
     );
   }
