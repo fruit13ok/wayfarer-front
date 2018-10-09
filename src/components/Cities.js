@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import CitiesAside from './CitiesAside'
 import CitiesArticle from './CitiesArticle'
 
-
 class Cities extends Component {
   constructor() {
     super();
@@ -19,7 +18,6 @@ class Cities extends Component {
         {name: "Seattle", image: "http://localhost:3001/images/seattle.jpg"},
         {name: "Mexico City", image: "http://localhost:3001/images/mexicoCity.png"}
       ],
-      // currSelectedCity: ''
       currSelectedCityName: "",
       currSelectedCityImage: ""
     };
@@ -33,11 +31,7 @@ class Cities extends Component {
       })
 
     } 
-    // console.log(data);
   }
-  // setCurrSelectedCity = (event) => {
-  //   console.log(event.target.name);
-  // }
   render() {
     console.log("inside cities.js:",this.state.currSelectedCityName);
     console.log("inside cities.js:",this.state.currSelectedCityImage);

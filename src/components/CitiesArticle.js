@@ -18,4 +18,3 @@ class CitiesArticle extends Component {
 }
 
 export default CitiesArticle;
-

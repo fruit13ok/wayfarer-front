@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import CityList from './CityList'
 
-
 class CitiesAside extends Component {
   render() {
     return (
@@ -15,4 +14,3 @@ class CitiesAside extends Component {
 }
 
 export default CitiesAside;
-

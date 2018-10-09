@@ -18,19 +18,6 @@ class City extends Component {
 
     );
   }
-
-  // render() {
-    // var citiesList = this.props.cities.map(city => {
-   //   return <li><img src={city.image} /><a onClick={this.props.setCurrSelectedCity(city.name)} href="#">{city.name}</a></li>;
-   // });
-    // return (
-    //   <div>
-      
-  //     <li><img src={this.props.city.image} /><a onClick={this.props.setCurrSelectedCity(this.props.city.name)} href="#">{this.props.city.name}</a></li>
-  // </div>
-
-  //   );
-  // }
 }
 
 export default City;
