@@ -62,3 +62,96 @@ Backend start bcrypt, fix seed.
 Encounter passing up login state and user data, redirect.
 Backend eidt payload in token, verify token.
 
+## Code Snippets
+
+#### NavBar view changing when logged in status switches after signup (or login):
+
+App.js Componenet...
+```
+class App extends Component {
+  constructor () {
+    super()
+
+    this.state = {
+      isLoggedIn:false
+    }
+  }
+
+componentDidMount () {  
+  this.authfunc()
+}
+
+authfunc = () => {
+  if (localStorage.token ){
+    this.setState({
+      isLoggedIn: true,
+    })
+  }
+  else {
+    this.setState({
+      isLoggedIn:false
+    })
+  } 
+}
+
+  render() {
+    return (
+      <div className="App">
+        <Header authfunc={this.authfunc} isLoggedIn={this.state.isLoggedIn}/>
+        <Main isLoggedIn={this.state.isLoggedIn}/>
+        <Footer />
+      </div>
+    );
+  }
+}
+```
+
+LoginModalContainer.js componenet....
+```
+  handleSignUp = (event) => {
+    console.log('username: ',this.state.username);
+    console.log('password: ',this.state.password);
+    console.log('currentCity: ',this.state.currentCity);
+    event.preventDefault();
+      axios.post('http://localhost:3001/users/signup',
+        {
+          username: this.state.username,
+          password: this.state.password,
+          currentCity: this.state.currentCity
+        } )
+        .then(response => {
+          localStorage.token=response.data.token
+          this.props.authfunc()
+        })
+        .catch(err => console.log(err))
+  }
+```
+
+Nav.js component....
+```
+class Nav extends Component {
+    render() {
+        let navBarItems = []
+        if(this.props.isLoggedIn) {
+            navBarItems.push(<li ><Link to="/cities"> Cities </Link></li>)
+            navBarItems.push(<li><Link to="/profile/:name"> Profile </Link></li>)
+            navBarItems.push(<li><a href="/" onClick={this.props.handleLogOut}> Log Out </a></li>)
+            navBarItems.push(<form id='myForm'>
+                                <input type="search" placeholder="Search ..."/>
+                                <button onClick=""><i class="fas fa-search"></i></button>
+                            </form>)
+        }
+        else {
+            navBarItems.push( <LoginModalContainer authfunc={this.props.authfunc} isLoggedIn={this.props.isLoggedIn}/>)
+        }
+        return (
+            <nav id="header-nav">
+                <ul>
+                {navBarItems}
+                </ul>
+            </nav>
+        );
+    }
+}
+```
+
